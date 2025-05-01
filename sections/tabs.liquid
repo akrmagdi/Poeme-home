@@ -1,0 +1,179 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{%- if section.blocks.size > 0 -%}
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="container {% if section.settings.text_alignment == 'center' %}container--xl{% endif %}">
+      <div class="section-stack">
+        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
+
+        <!-- DESKTOP LAYOUT -->
+
+        <x-tabs class="content-tabs {% if section.settings.text_alignment == 'center' %}content-tabs--center{% endif %} hidden sm:block">
+          <template shadowrootmode="open">
+            <slot role="tablist" part="tab-list" name="title"></slot>
+            <slot part="tab-panel-list" name="content"></slot>
+          </template>
+
+          {%- for block in section.blocks -%}
+            {%- assign title = block.settings.title | default: block.settings.page.title -%}
+            {%- assign content = block.settings.page.content | default: block.settings.content -%}
+
+            {%- if title != blank and content != blank -%}
+              <button class="h6" type="button" role="tab" slot="title" {{ block.shopify_attributes }}>{{ title }}</button>
+
+              <div role="tabpanel" slot="content" {% cycle '', 'hidden', 'hidden', 'hidden', 'hidden' %}>
+                <div class="prose">
+                  {{- content -}}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </x-tabs>
+
+        <!-- MOBILE LAYOUT -->
+
+        <div class="accordion-group sm:hidden">
+          {%- for block in section.blocks -%}
+            {%- assign title = block.settings.title | default: block.settings.page.title -%}
+            {%- assign content = block.settings.page.content | default: block.settings.content -%}
+
+            {%- if title != blank and content != blank -%}
+              {%- render 'accordion', title: title, content: content, open: block.settings.open_on_mobile, prose_content: true -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Tabs Section",
+  "class": "shopify-section--tabs",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separate Section with Border",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Tab"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page",
+          "info": "Select a page for content"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_on_mobile",
+          "label": "Open on Mobile",
+          "info": "Automatically open this tab on mobile view",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs Preset",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 1",
+            "content": "<p>Use this text to share information about your brand with your customers.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 2",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 3",
+            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

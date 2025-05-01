@@ -1,0 +1,255 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+                 
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Main List Collections",
+  "class": "shopify-section--main-list-collections",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "collection_list",
+      "id": "collections",
+      "label": "Selected Collections",
+      "limit": 48
+    },
+    {
+      "type": "select",
+      "id": "collections_per_row_mobile",
+      "label": "Collections Per Row Mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "range",
+      "id": "collections_per_row_desktop",
+      "min": 1,
+      "max": 4,
+      "label": "Collections Per Row Desktop",
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image Size",
+      "info": "Avoid cropping images by selecting the right ratio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Original Image Ratio"
+        },
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content Position",
+      "options": [
+        {
+          "value": "place-self-start text-start",
+          "label": "Top Left"
+        },
+        {
+          "value": "place-self-start-center text-center",
+          "label": "Top Center"
+        },
+        {
+          "value": "place-self-start-end text-end",
+          "label": "Top Right"
+        },
+        {
+          "value": "place-self-center-start text-start",
+          "label": "Middle Left"
+        },
+        {
+          "value": "place-self-center text-center",
+          "label": "Middle Center"
+        },
+        {
+          "value": "place-self-center-end text-end",
+          "label": "Middle Right"
+        },
+        {
+          "value": "place-self-end-start text-start",
+          "label": "Bottom Left"
+        },
+        {
+          "value": "place-self-end-center text-center",
+          "label": "Bottom Center"
+        },
+        {
+          "value": "place-self-end text-end",
+          "label": "Bottom Right"
+        }
+      ],
+      "default": "place-self-end-start text-start"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 30
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --collection-list-items-per-row: {{ section.settings.collections_per_row_mobile | times: 1 }};
+    --collection-list-gap: 1.5rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} {
+      --collection-list-items-per-row: {{ 2 | at_most: section.settings.collections_per_row_desktop }};
+    }
+  }
+
+  @media screen and (min-width: 1150px) {
+    #shopify-section-{{ section.id }} {
+      --collection-list-items-per-row: {{ section.settings.collections_per_row_desktop }};
+      --collection-list-gap: 1.875rem;
+    }
+  }
+</style>
+
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+  {%- if collections.size == 0 -%}
+    <div class="container container--xs">
+      <div class="empty-state">
+        <div class="prose">
+          <h1 class="h4">All Collections</h1>
+          <p>No collections available</p>
+
+          {%- assign button_content = 'Continue Shopping' -%}
+          {%- render 'button', content: button_content, href: routes.root_url -%}
+        </div>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="container">
+      <div class="section-stack">
+        {%- if section.settings.show_title -%}
+          <div class="section-header justify-self-center text-center">
+            {%- if request.page_type == 'list-collections' -%}
+              <h1 class="h2">All Collections</h1>
+            {%- else -%}
+              <h1 class="h2">{{ page.title }}</h1>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- paginate collections by 48 -%}
+          <div class="v-stack gap-6 sm:gap-8">
+            <div class="collection-list wrap">
+              {%- assign collections_to_show = section.settings.collections | default: collections -%}
+
+              {%- for collection in collections_to_show -%}
+                {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                  {%- continue -%}
+                {%- endif -%}
+
+                <a href="{{ collection.url }}" class="collection-card group">
+                  <div class="content-over-media content-over-media--{{ section.settings.image_size }}" style="--content-over-media-overlay: {{ section.settings.overlay_color }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }};">
+                    {%- capture sizes -%}(max-width: 699px) 100vw, (max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{%- endcapture -%}
+
+                    {%- assign loading_strategy = nil -%}
+
+                    {%- if forloop.index > 3 -%}
+                      {%- assign loading_strategy = 'lazy' -%}
+                    {%- endif -%}
+
+                    {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
+
+                    <div class="collection-card__content prose prose--tight {{ section.settings.content_position }}" style="{% render 'surface', text_color: section.settings.text_color %}">
+                      <p class="h3">{{ collection.title }}</p>
+                    </div>
+                  </div>
+                </a>
+              {%- endfor -%}
+            </div>
+
+            {%- if section.settings.collections == empty -%}
+              {%- render 'pagination', paginate: paginate -%}
+            {%- endif -%}
+          </div>
+        {%- endpaginate -%}
+      </div>
+    </div>
+  {%- endif -%}
+</div>

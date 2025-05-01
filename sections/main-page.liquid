@@ -1,0 +1,86 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+                 
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+  <div class="container container--{{ section.settings.page_width }}">
+    <div class="section-stack">
+      {%- if section.settings.show_title -%}
+        <div class="section-header justify-self-center text-center">
+          <h1 class="h2">{{ page.title }}</h1>
+        </div>
+      {%- endif -%}
+
+      {%- if page.content != empty %}
+        <div class="prose">
+          {{- page.content -}}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Page Section",
+  "class": "shopify-section--main-page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page Width",
+      "options": [
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        },
+        {
+          "value": "full",
+          "label": "Full Width"
+        }
+      ],
+      "default": "xs"
+    }
+  ]
+}
+{% endschema %}

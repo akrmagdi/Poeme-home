@@ -1,0 +1,71 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+<privacy-banner class="pop-in privacy-banner color-scheme color-scheme--{{ section.settings.color_scheme.id }}" handle-editor-events>
+  <button class="pop-in__close-button tap-area" is="dialog-close-button">
+    <span class="sr-only">Close</span>
+    {%- render 'icon' with 'close' -%}
+  </button>
+
+  <div class="v-stack gap-4">
+    {%- if section.settings.title != blank -%}
+      <p class="h6">{{ section.settings.title }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.content != blank -%}
+      <div class="prose text-xs">
+        {{- section.settings.content -}}
+      </div>
+    {%- endif -%}
+
+    <div class="h-stack gap-4">
+      <button type="button" class="link text-xs" data-action="accept">Accept</button>
+      <button type="button" class="link text-xs text-subdued" data-action="decline">Decline</button>
+    </div>
+  </div>
+</privacy-banner>
+
+{% schema %}
+{
+  "name": "Privacy Banner",
+  "class": "shopify-section--privacy-banner",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Show a privacy banner that informs users about your cookie policy."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "🍪 Cookie policy"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
+    }
+  ]
+}
+{% endschema %}

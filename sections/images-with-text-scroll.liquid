@@ -1,0 +1,319 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Images with Text Scroll",
+  "class": "shopify-section--images-with-text-scroll",
+  "tag": "section",
+  "max_blocks": 10,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "paragraph",
+      "content": "Instructions for using this section."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "info": "Recommendation for background image size."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile Background Image",
+      "info": "Recommendation for mobile background image size."
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Style",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "header",
+      "content": "Overlay Settings"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Recommendation for image size."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+          "info": "Content description for the block."
+        },
+        {
+          "type": "inline_richtext",
+          "id": "link_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "link_style",
+          "label": "Button Style",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
+          ],
+          "default": "solid"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images with Text Scroll",
+      "blocks": [
+        {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#1",
+            "content": "<p>Welcome your customers to your store by sharing temporary offers or explaining to them what your products are about.</p>"
+          }
+        },
+        {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#2",
+            "content": "<p>Create trust with your customers by explaining the story of your brand. Share your values or what is important to you.</p>"
+          }
+        },
+        {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#3",
+            "content": "<p>Share information about your product with your customers. Describe a product, and share info about your production process...</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{%- if section.blocks.size > 0 -%}
+  {%- assign section_carousel_id = 'section-carousel-' | append: section.id -%}
+
+  <style>
+    #shopify-section-{{ section.id }} {
+      {%- assign first_image = section.blocks | map: 'settings' | map: 'image' | compact | first -%}
+
+      --images-with-text-scroll-master-image-ratio: {{ first_image.aspect_ratio | default: 1 }};
+      --images-with-text-scroll-text-alignment: {{ section.settings.text_alignment }};
+
+      {%- if section.settings.overlay_color != 'rgba(0,0,0,0)' -%}
+        --images-with-text-scroll-overlay: {{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+      {%- endif -%}
+    }
+  </style>
+
+  <images-with-text-scroll id="{{ section_carousel_id }}" class="images-with-text-scroll {% if section.settings.image_position == 'end' %}images-with-text-scroll--reverse{% endif %} color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+    {%- if section.settings.background_image or section.settings.mobile_background_image -%}
+      <picture class="contents {% if section.settings.background_image == blank %}md:hidden{% endif %}">
+        {%- if section.settings.mobile_background_image -%}
+          <source
+              media="(max-width: 699px)"
+              srcset="{{ section.settings.mobile_background_image | image_url: width: '400x' }} 400w, {{ section.settings.mobile_background_image | image_url: width: '600x' }} 600w, {{ section.settings.mobile_background_image | image_url: width: '800x' }} 800w, {{ section.settings.mobile_background_image | image_url: width: '1000x' }} 1000w"
+              width="{{ section.settings.mobile_background_image.width }}"
+              height="{{ section.settings.mobile_background_image.height }}"
+          >
+        {%- endif -%}
+
+        {%- assign background_image = section.settings.background_image | default: section.settings.mobile_background_image -%}
+
+        {{- background_image | image_url: width: background_image.width | image_tag: widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'images-with-text-scroll__image-background' -}}
+      </picture>
+    {%- endif -%}
+
+    <div class="images-with-text-scroll__container container container--md">
+      {%- assign images = section.blocks | map: 'settings' | map: 'image' | compact -%}
+
+      {%- for block in section.blocks -%}
+        <div class="images-with-text-scroll__item {% if forloop.first %}is-selected{% endif %}">
+          {%- liquid
+            if images.size == 0 and forloop.first
+              echo 'image' | placeholder_svg_tag: 'images-with-text-scroll__image placeholder'
+            elsif block.settings.image
+              assign loading = nil
+
+              unless forloop.first
+                assign loading = 'lazy'
+              endunless
+
+              echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading, sizes: '(max-width: 699px) 210px, (max-width: 999px) 440px, 575px', widths: '210,420,440,575,630,880,1150,1320,1725', style: 'object-position: inherit', class: 'images-with-text-scroll__image'
+            endif
+          -%}
+
+          <div class="images-with-text-scroll__text" {{ block.shopify_attributes }}>
+            <div class="prose">
+              {%- if block.settings.subheading != blank -%}
+                <p class="h6">{{ block.settings.subheading }}</p>
+              {%- endif -%}
+
+              {%- if block.settings.title != blank -%}
+                <p class="{{ section.settings.heading_tag }}">{{ block.settings.title }}</p>
+              {%- endif -%}
+
+              {{- block.settings.content -}}
+
+              {%- if block.settings.link_text != blank -%}
+                {%- render 'button', href: block.settings.link_url, content: block.settings.link_text, style: block.settings.link_style -%}
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+
+      {%- if section.blocks.size > 1 -%}
+        <carousel-navigation aria-controls="{{ section_carousel_id }}" class="page-dots md:hidden">
+          {%- for i in (1..section.blocks.size) -%}
+            <button class="tap-area" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+              <span class="sr-only">Go to item {{ forloop.index }}</span>
+            </button>
+          {%- endfor -%}
+        </carousel-navigation>
+      {%- endif -%}
+    </div>
+  </images-with-text-scroll>
+{%- endif -%}

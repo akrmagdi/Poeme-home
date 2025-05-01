@@ -1,0 +1,53 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+                 
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Activate Customer Account",
+  "class": "shopify-section--main-customers-activate-account",
+  "tag": "section"
+}
+{% endschema %}
+
+<div class="section-spacing">
+  <div class="container container--xxs">
+    <div class="customer-account-box">
+      <div class="v-stack gap-6">
+        <div class="v-stack gap-4">
+          <h1 class="h3">Activate Your Account</h1>
+          <p>Follow the instructions to activate your account.</p>
+        </div>
+
+        {%- form 'activate_customer_password', name: 'activate', class: 'form', id: 'activate-customer-password' -%}
+          <div class="fieldset">
+            {% liquid
+              if form.errors
+                assign content = form.errors | default_errors
+                render 'banner', status: 'error', content: content
+              endif
+
+              render 'input', type: 'password', name: 'customer[password]', label: 'Password', autocomplete: 'new-password'
+              render 'input', type: 'password', name: 'customer[password_confirmation]', label: 'Confirm Password', autocomplete: 'new-password'
+              render 'button', content: 'Activate Account', type: 'submit'
+              render 'button', content: 'Cancel', name: 'decline', type: 'submit', style: 'outline'
+            %}
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</div>

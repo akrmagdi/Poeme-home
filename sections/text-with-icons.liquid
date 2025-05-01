@@ -1,0 +1,508 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Text with Icons",
+  "class": "shopify-section--text-with-icons",
+  "tag": "section",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separate Section with Border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_on_mobile",
+      "label": "Stack on Mobile",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Icon Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "picto-award-gift",
+              "label": "Award Gift",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-bag-handle",
+              "label": "Bag Handle",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-building",
+              "label": "Building",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-coupon",
+              "label": "Coupon",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-gift",
+              "label": "Gift",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-info",
+              "label": "Info",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-love",
+              "label": "Love",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-percent",
+              "label": "Percent",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-star",
+              "label": "Star",
+              "group": "Shop Category"
+            },
+            {
+              "value": "picto-box",
+              "label": "Box",
+              "group": "Shipping Category"
+            },
+            {
+              "value": "picto-delivery-truck",
+              "label": "Delivery Truck",
+              "group": "Shipping Category"
+            },
+            {
+              "value": "picto-pin",
+              "label": "Pin",
+              "group": "Shipping Category"
+            },
+            {
+              "value": "picto-plane",
+              "label": "Plane",
+              "group": "Shipping Category"
+            },
+            {
+              "value": "picto-return",
+              "label": "Return",
+              "group": "Shipping Category"
+            },
+            {
+              "value": "picto-credit-card",
+              "label": "Credit Card",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-lock",
+              "label": "Lock",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-money",
+              "label": "Money",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-secure-profile",
+              "label": "Secure Profile",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-shield",
+              "label": "Shield",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-earth",
+              "label": "Earth",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-leaf",
+              "label": "Leaf",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-recycle",
+              "label": "Recycle",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-tree",
+              "label": "Tree",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-at-sign",
+              "label": "At Sign",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-bluetooth",
+              "label": "Bluetooth",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-camera",
+              "label": "Camera",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-printer",
+              "label": "Printer",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-smart-watch",
+              "label": "Smart Watch",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-wifi",
+              "label": "WiFi",
+              "group": "Tech Category"
+            },
+            {
+              "value": "picto-avatar",
+              "label": "Avatar",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-chat",
+              "label": "Chat",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-calendar",
+              "label": "Calendar",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-comment",
+              "label": "Comment",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-customer-support",
+              "label": "Customer Support",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-happy-face",
+              "label": "Happy Face",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-mailbox",
+              "label": "Mailbox",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-mobile-phone",
+              "label": "Mobile Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-operator",
+              "label": "Operator",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-phone",
+              "label": "Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-send",
+              "label": "Send",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-user",
+              "label": "User",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-burger",
+              "label": "Burger",
+              "group": "Food Category"
+            },
+            {
+              "value": "picto-beer",
+              "label": "Beer",
+              "group": "Food Category"
+            },
+            {
+              "value": "picto-coffee",
+              "label": "Coffee",
+              "group": "Food Category"
+            },
+            {
+              "value": "picto-pizza",
+              "label": "Pizza",
+              "group": "Food Category"
+            },
+            {
+              "value": "picto-bottle",
+              "label": "Bottle",
+              "group": "Food Category"
+            },
+            {
+              "value": "picto-document",
+              "label": "Document",
+              "group": "Other"
+            },
+            {
+              "value": "picto-error",
+              "label": "Error",
+              "group": "Other"
+            },
+            {
+              "value": "picto-file",
+              "label": "File",
+              "group": "Other"
+            },
+            {
+              "value": "picto-jewelry",
+              "label": "Jewelry",
+              "group": "Other"
+            },
+            {
+              "value": "picto-mask",
+              "label": "Mask",
+              "group": "Other"
+            },
+            {
+              "value": "picto-music",
+              "label": "Music",
+              "group": "Other"
+            },
+            {
+              "value": "picto-not-allowed",
+              "label": "Not Allowed",
+              "group": "Other"
+            },
+            {
+              "value": "picto-target",
+              "label": "Target",
+              "group": "Other"
+            },
+            {
+              "value": "picto-timer",
+              "label": "Timer",
+              "group": "Other"
+            },
+            {
+              "value": "picto-success",
+              "label": "Success",
+              "group": "Other"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon",
+          "info": "Custom icon upload"
+        },
+        {
+          "type": "range",
+          "id": "icon_width",
+          "min": 16,
+          "max": 64,
+          "step": 4,
+          "unit": "px",
+          "label": "Icon Width",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "mobile_icon_width",
+          "min": 16,
+          "max": 64,
+          "step": 4,
+          "unit": "px",
+          "label": "Mobile Icon Width",
+          "default": 24
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Short content about your store</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with Icons",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "title": "Free shipping",
+            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "title": "Customer service",
+            "content": "<p>We are available from monday to friday to answer your questions.</p>"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "title": "Secure payment",
+            "content": "<p>Your payment information is processed securely.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{%- if section.blocks.size > 0 -%}
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="container">
+      <div class="v-stack gap-8">
+        {%- capture section_content -%}
+          {%- for block in section.blocks -%}
+            <div class="text-with-icons__item {% if forloop.first %}is-selected{% endif %} {% unless section.settings.stack_on_mobile %}snap-center{% endunless %}" role="group" aria-label="{{ 'general.accessibility.item_nth_of_count' | t: index: forloop.index, count: section.blocks.size }}" {{ block.shopify_attributes }}>
+              <div class="v-stack gap-6 justify-items-center sm:justify-items-{{ section.settings.text_alignment }}">
+                {%- if block.settings.custom_icon != blank -%}
+                  {%- capture sizes -%}{{ block.settings.icon_width }}px{%- endcapture -%}
+                  {%- capture widths -%}{{ block.settings.icon_width }}, {{ block.settings.icon_width | times: 2 | at_most: block.settings.custom_icon.width }}{%- endcapture -%}
+                  {%- capture style -%}--image-mobile-max-width: {{ block.settings.mobile_icon_width }}px; --image-max-width: {{ block.settings.icon_width }}px{%- endcapture -%}
+                  {{- block.settings.custom_icon | image_url: width: block.settings.custom_icon.width | image_tag: loading: 'lazy', sizes: sizes, widths: widths, class: 'constrained-image', style: style -}}
+                {%- else -%}
+                  <div style="{% render 'surface', text_color: section.settings.icon_color %}">
+                    {%- render 'icon' with block.settings.icon, width: block.settings.mobile_icon_width, class: 'sm:hidden' -%}
+                    {%- render 'icon' with block.settings.icon, width: block.settings.icon_width, class: 'hidden sm:block' -%}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.title != blank or block.settings.content != blank -%}
+                  <div class="v-stack gap-2 text-center sm:text-{{ section.settings.text_alignment }}">
+                    {%- if block.settings.title != blank -%}
+                      <p class="h6">{{ block.settings.title }}</p>
+                    {%- endif -%}
+
+                    {%- if block.settings.content != blank -%}
+                      <div class="prose">
+                        {{- block.settings.content -}}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- if section.settings.stack_on_mobile -%}
+          <div class="text-with-icons text-with-icons--stacked" role="region" style="{% render 'surface', text_color: section.settings.text_color %}">
+            {{- section_content -}}
+          </div>
+        {%- else -%}
+          {%- assign carousel_id = 'text-with-icons-' | append: section.id -%}
+
+          <text-with-icons-carousel disabled-on="sm" allow-swipe id="{{ carousel_id }}" class="text-with-icons full-bleed sm:unbleed" role="region" style="{% render 'surface', text_color: section.settings.text_color %}">
+            {{- section_content -}}
+          </text-with-icons-carousel>
+
+          {%- if section.blocks.size > 1 -%}
+            <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots sm:hidden">
+              {%- for i in (1..section.blocks.size) -%}
+                <button class="tap-area" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                  <span class="sr-only">{{ 'general.accessibility.go_to_item' | t: index: forloop.index }}</span>
+                </button>
+              {%- endfor -%}
+            </carousel-navigation>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

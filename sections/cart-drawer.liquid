@@ -1,0 +1,223 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+<cart-drawer id="cart-drawer" class="cart-drawer drawer {% if cart.empty? %}drawer--center-body{% endif %} color-scheme color-scheme--{{ section.settings.color_scheme.id }}" initial-focus="false" handle-editor-events>
+  <p class="h4" slot="header">Cart</p>
+
+  {%- if cart.empty? -%}
+    <p class="h5 text-center">Your cart is currently empty</p>
+  {%- else -%}
+    {%- if settings.cart_show_free_shipping_bar -%}
+      {%- render 'free-shipping-bar' -%}
+    {%- endif -%}
+
+    <div class="cart-drawer__items">
+      {%- for line_item in cart.items -%}
+        {%- render 'line-item', line_item: line_item, show_quantity_selector: true -%}
+      {%- endfor -%}
+    </div>
+
+    {%- liquid
+      assign cross_sell_products_count = 0
+
+      for product in section.settings.cross_sell_products
+        assign products_in_cart = cart.items | where: 'product_id', product.id
+
+        if products_in_cart.size == 0 and product.available
+          assign cross_sell_products_count = cross_sell_products_count | plus: 1
+        endif
+      endfor
+    -%}
+
+    {%- if cross_sell_products_count > 0 -%}
+      <div class="cart-drawer__complementary-products complementary-products">
+        {%- assign carousel_id = 'complementary-products-carousel-' | append: section.id -%}
+
+        {%- if section.settings.cross_sell_title != blank or section.settings.cross_sell_stack_products == false and cross_sell_products_count > 1 -%}
+          <div class="complementary-products__header complementary-products__header--align-start">
+            <p class="h6">{{ section.settings.cross_sell_title }}</p>
+
+            {%- if section.settings.cross_sell_stack_products == false and cross_sell_products_count > 1 -%}
+              <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots page-dots--narrow">
+                {%- for i in (1..cross_sell_products_count) -%}
+                  <button class="relative" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                    <span class="sr-only">Go to item {{ forloop.index }}</span>
+                  </button>
+                {%- endfor -%}
+              </carousel-navigation>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- liquid
+          capture complementary_products
+            for product in section.settings.cross_sell_products
+              assign products_in_cart = cart.items | where: 'product_id', product.id
+
+              if products_in_cart.size == 0 and product.available
+                render 'product-card-horizontal', product: product, show_quick_buy: true
+              endif
+            endfor
+          endcapture
+        -%}
+
+        {%- if section.settings.cross_sell_stack_products -%}
+          <div class="complementary-products__product-list">
+            {{- complementary_products -}}
+          </div>
+        {%- else -%}
+          <scroll-carousel id="{{ carousel_id }}" class="complementary-products__product-list complementary-products__product-list--carousel scroll-area bleed snap-x">
+            {{- complementary_products -}}
+          </scroll-carousel>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <form action="{{ routes.cart_url }}" method="POST" class="cart-drawer__footer" slot="footer">
+      <input type="hidden" name="attributes[products_mobile_grid_mode]" value="">
+      <input type="hidden" name="attributes[products_desktop_grid_mode]" value="">
+
+      {%- if section.settings.show_cart_note or section.settings.show_shipping_text -%}
+        <div class="v-stack gap-0.5 justify-items-start">
+          {%- if section.settings.show_cart_note -%}
+            {%- assign cart_note_dialog_id = 'cart-note-' | append: section.id -%}
+            <button class="link-faded-reverse" aria-controls="{{ cart_note_dialog_id }}">Add order note</button>
+
+            <cart-note-dialog id="{{ cart_note_dialog_id }}" class="cart-drawer__order-note">
+              <div class="form">
+                <cart-note class="form-control">
+                  {%- assign order_note = 'Order note' -%}
+                  {%- assign placeholder = 'Note (optional)' -%}
+                  {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note, placeholder: placeholder, show_label_as_block: true -%}
+                </cart-note>
+
+                <button type="button" class="button" is="dialog-close-button">Save note</button>
+              </div>
+            </cart-note-dialog>
+          {%- endif -%}
+
+          {%- if section.settings.show_shipping_text -%}
+            <p class="text-subdued">Taxes and shipping calculated at checkout</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {% for discount_application in cart.cart_level_discount_applications %}
+        <div class="h-stack justify-start gap-4">
+          <span class="discount-badge text-xs">{%- render 'icon' with 'discount', width: 12 -%} {{- discount_application.title -}}</span>
+          <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+        </div>
+      {% endfor %}
+
+      <div class="button-group">
+        {%- if section.settings.show_view_cart_button or section.settings.show_checkout_button == false -%}
+          {%- assign view_cart = 'View Cart' -%}
+          {%- render 'button', href: routes.cart_url, content: view_cart, stretch: true -%}
+        {%- endif -%}
+
+        {%- if section.settings.show_checkout_button -%}
+          {%- capture checkout_button -%}
+            Checkout
+
+            {%- if section.settings.show_price_in_checkout_button -%}
+              <span class="cart-drawer__button-price">{{- cart.total_price | money -}}</span>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout', stretch: true -%}
+        {%- endif -%}
+      </div>
+    </form>
+  {%- endif -%}
+</cart-drawer>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "class": "shopify-section--cart-drawer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Cart Drawer Info"
+    },
+    {
+      "type": "paragraph",
+      "content": "Free Shipping Bar Info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_note",
+      "label": "Show Cart Note",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_text",
+      "label": "Show Shipping Text",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_cart_button",
+      "label": "Show View Cart Button",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_checkout_button",
+      "label": "Show Checkout Button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_in_checkout_button",
+      "label": "Show Price in Checkout Button",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Cross-Sell Products"
+    },
+    {
+      "type": "product_list",
+      "id": "cross_sell_products",
+      "label": "Cross-Sell Products",
+      "info": "Up to 5 cross-sell products",
+      "limit": 5
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cross_sell_title",
+      "label": "Cross-Sell Title",
+      "default": "Complete with"
+    },
+    {
+      "type": "checkbox",
+      "id": "cross_sell_stack_products",
+      "label": "Stack Cross-Sell Products",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

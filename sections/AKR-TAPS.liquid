@@ -1,0 +1,285 @@
+{%- comment -%}
+    
+        ██████████████████████████████████████████████████████████████
+        
+                           AKR Motion - Code Creation
+        
+           Specializing in cutting-edge web development, UX/UI, and 
+           software solutions. This code was developed by AKR Motion 
+                         in 2024 for specific project needs. 
+          
+                        Visit: https://akr-motion.com
+                     Contact: contact@akr-motion.com
+                     
+        ██████████████████████████████████████████████████████████████
+    
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Explore by Activity",
+  "blocks": [
+    {
+      "type": "tab_block",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_text",
+          "label": "Tab Text",
+          "default": "Running"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image",
+          "label": "Tab Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_1_image",
+          "label": "Card 1 Image"
+        },
+        {
+          "type": "text",
+          "id": "card_1_text",
+          "label": "Card 1 Text",
+          "default": "Running"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_2_image",
+          "label": "Card 2 Image"
+        },
+        {
+          "type": "text",
+          "id": "card_2_text",
+          "label": "Card 2 Text",
+          "default": "Hiking"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_3_image",
+          "label": "Card 3 Image"
+        },
+        {
+          "type": "text",
+          "id": "card_3_text",
+          "label": "Card 3 Text",
+          "default": "Cycling"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_4_image",
+          "label": "Card 4 Image"
+        },
+        {
+          "type": "text",
+          "id": "card_4_text",
+          "label": "Card 4 Text",
+          "default": "Climbing"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Explore by Taps",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="TK-Taps" id="explore-activity">
+  <div class="tap-wrapper">
+    <div class="tap">
+      {% for block in section.blocks %}
+        <button class="taps-card" data-tab="{{ forloop.index }}" style="background-image: url({{ block.settings.tab_image | img_url: 'small' }});">
+          {{ block.settings.tab_text }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="acitvty-wrapper" id="activity-wrapper">
+    <h2>Explore by Activity</h2>
+
+    {% for block in section.blocks %}
+    <div class="TK-taps-grid images-group" id="tab-content-{{ forloop.index }}" {% if forloop.first %}style="display: grid;"{% else %}style="display: none;"{% endif %}>
+      <div class="card card1" style="background-image: url({{ block.settings.card_1_image | img_url: 'large' | default: 'https://via.placeholder.com/400x200?text=Card+1' }});">
+        <p>{{ block.settings.card_1_text }}</p>
+      </div>
+      <div class="card card2" style="background-image: url({{ block.settings.card_2_image | img_url: 'large' | default: 'https://via.placeholder.com/400x200?text=Card+2' }});">
+        <p>{{ block.settings.card_2_text }}</p>
+      </div>
+      <div class="card card3" style="background-image: url({{ block.settings.card_3_image | img_url: 'large' | default: 'https://via.placeholder.com/400x200?text=Card+3' }});">
+        <p>{{ block.settings.card_3_text }}</p>
+      </div>
+      <div class="card card4" style="background-image: url({{ block.settings.card_4_image | img_url: 'large' | default: 'https://via.placeholder.com/400x200?text=Card+4' }});">
+        <p>{{ block.settings.card_4_text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .TK-Taps {
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .TK-Taps.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tap-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tap {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .taps-card {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+  }
+
+  .acitvty-wrapper {
+    position: relative;
+    transition: height 0.5s ease; /* Smooth height transition */
+  }
+
+  .acitvty-wrapper h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #472277;
+  }
+
+  .TK-taps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .TK-taps-grid.fade-down {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .TK-taps-grid.fade-up {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .TK-taps-grid.fade-up-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px 32px;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .card p {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.getElementById('explore-activity');
+    const tabs = document.querySelectorAll('.taps-card');
+    const groups = document.querySelectorAll('.images-group');
+    const wrapper = document.getElementById('activity-wrapper');
+
+    // Check if section is in viewport
+    function isInViewport(elem) {
+      const bounding = elem.getBoundingClientRect();
+      return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Animate section when it comes into view
+    window.addEventListener('scroll', function() {
+      if (isInViewport(section)) {
+        section.classList.add('active');
+      }
+    });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetTab = this.getAttribute('data-tab');
+        const currentGroup = document.querySelector('.TK-taps-grid:not([style*="none"])');
+        const selectedGroup = document.getElementById(`tab-content-${targetTab}`);
+
+        if (currentGroup && currentGroup !== selectedGroup) {
+          // Set the height of the wrapper to avoid layout shifting
+          wrapper.style.height = currentGroup.offsetHeight + 'px';
+
+          // Fade-down current group
+          currentGroup.classList.add('fade-down');
+          currentGroup.classList.remove('fade-up-active');
+
+          setTimeout(() => {
+            currentGroup.style.display = 'none';
+            currentGroup.classList.remove('fade-down');
+
+            // Fade-up new selected group
+            selectedGroup.classList.add('fade-up');
+            selectedGroup.style.display = 'grid';
+
+            setTimeout(() => {
+              selectedGroup.classList.add('fade-up-active');
+              selectedGroup.classList.remove('fade-up');
+              // Adjust height to new content
+              wrapper.style.height = selectedGroup.offsetHeight + 'px';
+            }, 50); // Small delay before showing the fade-up
+          }, 500); // Match with the transition timing
+        }
+      });
+    });
+
+    // Set first tab and group active by default
+    tabs[0].click();
+  });
+</script>
+

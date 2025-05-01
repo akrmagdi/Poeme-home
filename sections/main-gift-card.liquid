@@ -1,0 +1,132 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+                 
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Main Gift Card",
+  "class": "shopify-section--main-gift-card",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Gift Card Image",
+      "info": "Upload an image for the gift card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_qr_code",
+      "label": "Show QR Code",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  @media print {
+    /* Hide anything but the main content when printing */
+    *:has(~ #main), #main ~ * {
+      display: none;
+    }
+  }
+</style>
+
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+  <div class="container container--xxs">
+    <div class="gift-card v-stack gap-12">
+      <!-- GIFT CARD IMAGE -->
+      {%- assign image = section.settings.image | default: gift_card.product.featured_media -%}
+
+      {%- if image != blank -%}
+        {{- image | image_url: width: image.width | image_tag: sizes: '270px', widths: '270,540,810', class: 'gift-card__image' -}}
+      {%- else -%}
+        <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" class="gift-card__image" alt="" width="270" height="180">
+      {%- endif -%}
+
+      <!-- GIFT CARD INFO -->
+      <div class="v-stack gap-6 sm:gap-8">
+        <div class="v-stack gap-5">
+          <h1 class="h3 text-center">Gift Card</h1>
+
+          {% liquid
+            if gift_card.expired or gift_card.enabled == false
+              assign banner_error = 'This gift card has expired.'
+              render 'banner', status: 'error', content: banner_error, text_alignment: 'center'
+            else
+              assign gift_card_balance = gift_card.balance | money
+              assign gift_card_initial_value = gift_card.initial_value | money
+
+              if gift_card.balance == gift_card.initial_value
+                assign banner_message = 'Gift card amount: ' | t: initial_value: gift_card_initial_value
+              else
+                assign banner_message = 'Remaining balance: ' | t: balance: gift_card_balance, initial_value: gift_card_initial_value
+              endif
+
+              render 'banner', status: 'success', content: banner_message, text_alignment: 'center'
+            endif
+          %}
+        </div>
+
+        <!-- REDEEM INFO -->
+        <div class="gift-card__redeem-info bg-secondary text-center">
+          <div class="v-stack gap-6">
+            <div class="v-stack gap-5">
+              <p>To redeem, use the following code:</p>
+
+              <input type="text" class="input text-center" value="{{ gift_card.code | format_code }}" readonly aria-label="Gift Card Code" onclick="this.select()">
+
+              <div class="button-group button-group--same-width justify-center">
+                <button type="button" class="button w-full" onclick="window.print()">Print</button>
+                <button type="button" class="button button--secondary w-full" is="copy-button" data-text="{{ gift_card.code | escape }}" data-success-message="Code copied!">Copy</button>
+              </div>
+            </div>
+
+            {%- if gift_card.expires_on -%}
+              {%- assign expires_on = gift_card.expires_on | date: format: 'date' -%}
+              <p class="heading text-subdued text-xxs">Expires on: {{ expires_on }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <!-- SAVE OPTIONS -->
+        {%- if gift_card.pass_url or section.settings.show_qr_code -%}
+          <div class="gift-card__save">
+            {%- if section.settings.show_qr_code -%}
+              <p>Scan the QR code to redeem:</p>
+              <qr-code class="gift-card__qr-code" identifier="{{ gift_card.qr_identifier }}"></qr-code>
+            {%- endif -%}
+
+            {%- if gift_card.pass_url -%}
+              <a href="{{ gift_card.pass_url }}" class="gift-card__apple-wallet">
+                <img src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="145" height="45" alt="Add to Apple Wallet" loading="lazy">
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>

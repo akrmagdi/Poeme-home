@@ -1,0 +1,219 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Main Cart Section",
+  "class": "shopify-section--main-cart",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_note",
+      "label": "Show Cart Note",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_order_weight",
+      "label": "Show Order Weight",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_text",
+      "label": "Show Shipping Text",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_accelerated_buttons",
+      "label": "Show Accelerated Payment Buttons",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_estimator",
+      "label": "Show Shipping Estimator",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}
+
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+  {%- if cart.empty? -%}
+    <div class="container container--xs">
+      <div class="empty-state">
+        <div class="prose">
+          <h1 class="h4">Cart</h1>
+          <p>Your cart is currently empty.</p>
+
+          {%- assign button_content = 'Continue Shopping' -%}
+          {%- render 'button', content: button_content, href: settings.cart_empty_cart_link -%}
+        </div>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="container container--sm">
+      <div class="section-stack">
+        <div class="section-header justify-self-center text-center">
+          <div class="v-stack gap-4">
+            <h1 class="h2">Cart</h1>
+
+            {%- if settings.cart_show_free_shipping_bar -%}
+              {%- render 'free-shipping-bar' -%}
+            {%- endif -%}
+          </div>
+        </div>
+
+        <form action="{{ routes.cart_url }}" method="POST" class="cart-page">
+          <input type="hidden" name="attributes[products_mobile_grid_mode]" value="">
+          <input type="hidden" name="attributes[products_desktop_grid_mode]" value="">
+
+          <div class="v-stack gap-6">
+            <table class="order-summary table--reduce-border">
+              <thead class="order-summary__header">
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-end">Total</th>
+                </tr>
+              </thead>
+
+              <tbody class="order-summary__body">
+                {%- for line_item in cart.items -%}
+                  <tr>
+                    <td>{%- render 'line-item', line_item: line_item, show_quantity_selector: true -%}</td>
+
+                    <td class="text-center">
+                      <line-item-quantity class="v-stack justify-items-center gap-2">
+                        {%- render 'quantity-selector', line_item: line_item, size: 'sm', add_updates: true -%}
+                        <a href="{{ line_item.url_to_remove }}" class="link text-xs">Remove</a>
+                      </line-item-quantity>
+                    </td>
+
+                    <td class="text-end">
+                      {%- if settings.currency_code_enabled -%}
+                        {{- line_item.final_line_price | money_with_currency -}}
+                      {%- else -%}
+                        {{- line_item.final_line_price | money -}}
+                      {%- endif -%}
+                    </td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+
+            <div class="cart-footer">
+              {%- if section.settings.show_cart_note -%}
+                <cart-note class="cart-note">
+                  {%- assign order_note = 'Add a note to your order' -%}
+                  {%- assign placeholder = 'Leave a note for special requests' -%}
+                  {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note, placeholder: placeholder, show_label_as_block: true -%}
+                </cart-note>
+              {%- endif -%}
+
+              <div class="cart-recap">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == '@app' -%}
+                    {%- render block -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if section.settings.show_order_weight -%}
+                  <div class="h-stack justify-start gap-2">
+                    <span class="text-subdued">Weight:</span>
+                    <span class="text-subdued">{{ cart.total_weight | weight_with_unit }}</span>
+                  </div>
+                {%- endif -%}
+
+                {%- if cart.items_subtotal_price != cart.total_price -%}
+                  <div class="h-stack justify-start gap-2">
+                    <span class="text-subdued">Subtotal:</span>
+                    <span class="text-subdued">
+                      {%- if settings.currency_code_enabled -%}
+                        {{- cart.items_subtotal_price | money_with_currency -}}
+                      {%- else -%}
+                        {{- cart.items_subtotal_price | money -}}
+                      {%- endif -%}
+                    </span>
+                  </div>
+                {%- endif -%}
+
+                {% for discount_application in cart.cart_level_discount_applications %}
+                  <div class="h-stack justify-start gap-2">
+                    <span class="discount-badge text-xs">{%- render 'icon' with 'discount', width: 12 -%} {{- discount_application.title -}}</span>
+                    <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+                  </div>
+                {% endfor %}
+
+                <div class="h-stack justify-start gap-2">
+                  <span class="text-lg">Total:</span>
+                  <span class="text-lg">{{- cart.total_price | money_with_currency -}}</span>
+                </div>
+
+                {%- if section.settings.show_shipping_text -%}
+                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                    <p class="text-subdued text-sm">Taxes included. <a href="{{ shop.shipping_policy.url }}">Shipping policy</a></p>
+                  {%- elsif cart.taxes_included -%}
+                    <p class="text-subdued text-sm">Taxes included, shipping calculated at checkout.</p>
+                  {%- elsif shop.shipping_policy.body != blank -%}
+                    <p class="text-subdued text-sm">Taxes and shipping calculated at checkout. <a href="{{ shop.shipping_policy.url }}">Shipping policy</a></p>
+                  {%- else -%}
+                    <p class="text-subdued text-sm">Taxes and shipping calculated at checkout.</p>
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- if section.settings.show_accelerated_buttons and additional_checkout_buttons -%}
+                  <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                    {{- content_for_additional_checkout_buttons -}}
+                  </div>
+                {% endif %}
+
+                <noscript>
+                  {%- assign update_button = 'Update Cart' -%}
+                  {%- render 'button', type: 'submit', content: update_button, style: 'outline' -%}
+                </noscript>
+
+                {%- assign checkout_button = 'Checkout' -%}
+                {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout' -%}
+              </div>
+            </div>
+          </div>
+
+          {%- if section.settings.show_shipping_estimator and cart.requires_shipping -%}
+            {%- render 'shipping-estimator' -%}
+          {%- endif -%}
+        </form>
+      </div>
+    </div>
+  {%- endif -%}
+</div>

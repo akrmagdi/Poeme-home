@@ -1,0 +1,175 @@
+{%- comment -%}
+
+    ██████████████████████████████████████████████████████████████
+
+                       AKR Motion - Code Creation
+
+       Specializing in cutting-edge web development, UX/UI, and 
+       software solutions. This code was developed by AKR Motion 
+                     in 2024 for specific project needs. 
+
+                    Visit: https://akr-motion.com
+                 Contact: contact@akr-motion.com
+                 
+    ██████████████████████████████████████████████████████████████
+
+{%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Customer Order",
+  "class": "shopify-section--main-customers-order",
+  "tag": "section"
+}
+{% endschema %}
+
+<div class="section-spacing section-spacing--tight">
+  <div class="container container--lg">
+    <div class="section-stack">
+      <div class="v-stack justify-items-start gap-6">
+        <a href="{{ routes.account_url }}" class="text-with-icon h6 link-faded">
+          {%- render 'icon' with 'chevron-left', width: 10, direction_aware: true -%}
+          {{- 'customer.order.back' | t: name: order.name -}}
+        </a>
+
+        <div class="section-header text-start">
+          <div class="prose">
+            {%- assign order_created_at = order.created_at | date: format: 'date_at_time' -%}
+            <h1 class="h3">Order {{ order.name }}</h1>
+            <p>Created on {{ order_created_at }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="customer-order">
+        <div class="customer-order__details">
+          {%- if order.cancelled -%}
+            {%- assign cancelled_on = order.cancelled_at | date: format: 'date_at_time' -%}
+            {%- assign cancel_message = 'Order was cancelled on ' | append: cancelled_on | append: ' for ' | append: order.cancel_reason_label -%}
+            {%- render 'banner', status: 'error', content: cancel_message -%}
+          {%- endif -%}
+
+          {%- assign fulfillment = order.line_items | where: 'fulfillment' | map: 'fulfillment' | sort: 'created_at' | last -%}
+
+          {%- if order.shipping_address and fulfillment -%}
+            {%- assign created_at = fulfillment.created_at | date: format: 'date' -%}
+
+            {%- if fulfillment.tracking_number -%}
+              {%- assign fulfillment_message = 'Order shipped on ' | append: created_at | append: '. Tracking number: ' | append: fulfillment.tracking_number -%}
+            {%- else -%}
+              {%- assign fulfillment_message = 'Order shipped on ' | append: created_at -%}
+            {%- endif -%}
+
+            {%- if fulfillment.tracking_url -%}
+              {%- capture fulfillment_message -%}
+                <div class="banner__text-with-button">
+                  {{ fulfillment_message }}
+                  {%- render 'button', href: fulfillment.tracking_url, external: true, content: 'Track Shipment', size: 'sm' -%}
+                </div>
+              {%- endcapture -%}
+            {%- endif -%}
+
+            {%- render 'banner', status: 'success', content: fulfillment_message -%}
+          {%- endif -%}
+
+          <!-- ORDER SUMMARY -->
+          <table class="order-summary table--reduce-border">
+            <thead class="order-summary__header">
+              <tr>
+                <th>Product</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-end">Total</th>
+              </tr>
+            </thead>
+            <tbody class="order-summary__body">
+              {%- for line_item in order.line_items -%}
+                <tr>
+                  <td>{%- render 'line-item', line_item: line_item -%}</td>
+                  <td class="text-center">{{ line_item.quantity }}</td>
+                  <td class="text-end">{{ line_item.final_line_price | money }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+            <tfoot class="order-summary__footer">
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  <div class="h-stack gap-2 justify-between">
+                    <span class="text-subdued">Subtotal</span>
+                    <span class="text-subdued text-end">{{ order.line_items_subtotal_price | money }}</span>
+                  </div>
+                </td>
+              </tr>
+
+              {%- for discount_application in order.cart_level_discount_applications -%}
+                <tr>
+                  <td></td>
+                  <td colspan="2">
+                    <div class="h-stack gap-2 justify-between">
+                      <span class="text-subdued">Discount ({{ discount_application.title }})</span>
+                      <span class="text-subdued text-end">-{{ discount_application.total_allocated_amount | money }}</span>
+                    </div>
+                  </td>
+                </tr>
+              {%- endfor -%}
+
+              {%- for shipping_method in order.shipping_methods -%}
+                <tr>
+                  <td></td>
+                  <td colspan="2">
+                    <div class="h-stack gap-2 justify-between">
+                      <span class="text-subdued">Shipping ({{ shipping_method.title }})</span>
+                      <span class="text-subdued text-end">{{ shipping_method.price | money }}</span>
+                    </div>
+                  </td>
+                </tr>
+              {%- endfor -%}
+
+              {%- for tax_line in order.tax_lines -%}
+                <tr>
+                  <td></td>
+                  <td colspan="2">
+                    <div class="h-stack gap-2 justify-between">
+                      <span class="text-subdued">
+                        {{ 'Taxes' }} ({{ tax_line.title }} {{ tax_line.rate_percentage }}%)
+                      </span>
+                      <span class="text-subdued text-end">{{ tax_line.price | money }}</span>
+                    </div>
+                  </td>
+                </tr>
+              {%- endfor -%}
+
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  <div class="h-stack gap-2 justify-between">
+                    <span class="text-lg">Total</span>
+                    <span class="text-lg text-end">{{ order.total_net_amount | money_with_currency }}</span>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        {%- if order.billing_address or order.shipping_address -%}
+          <div class="customer-order__address-list">
+            {%- if order.billing_address -%}
+              <div class="v-stack gap-6 sm:gap-8">
+                <p class="customer-account-category h6 text-subdued">Billing Address</p>
+                {{- order.billing_address | format_address -}}
+              </div>
+            {%- endif -%}
+
+            {%- if order.shipping_address -%}
+              <div class="v-stack gap-6 sm:gap-8">
+                <p class="customer-account-category h6 text-subdued">Shipping Address</p>
+                {{- order.shipping_address | format_address -}}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
