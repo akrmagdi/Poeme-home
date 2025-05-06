@@ -72,7 +72,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "enable_sticky": true,
-        "hide_on_scroll": true,
+        "hide_on_scroll": false,
         "show_separation_border": true,
         "reduce_padding": true,
         "logo": "shopify://shop_images/IMG_1522.png",
