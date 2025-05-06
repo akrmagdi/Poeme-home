@@ -234,6 +234,8 @@
         "subheading": "Inspired by the Loom",
         "title": "Scenes to inspire your space.",
         "content": "",
+        "before_image": "shopify://shop_images/Verdi-_1.heic",
+        "after_image": "shopify://shop_images/White-_4.jpg",
         "expand_image": true,
         "text_position": "start",
         "before_after_text_position": "top",
