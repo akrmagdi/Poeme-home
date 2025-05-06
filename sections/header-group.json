@@ -1,1 +1,103 @@
-{"type":"header","name":"Header group","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"message_ia4Njn":{"type":"message","settings":{"text":"Soft living, worldwide."}},"message_JXcdhE":{"type":"message","settings":{"text":"Crafted with care. Delivered with love."}},"message_EUci9U":{"type":"message","settings":{"text":"Free shipping on orders over $100"}}},"block_order":["message_ia4Njn","message_JXcdhE","message_EUci9U"],"settings":{"color_scheme":"scheme-1","enable_sticky":true,"autoplay":true,"cycle_speed":5,"desktop_font_size":11,"mobile_font_size":10}},"header":{"type":"header","blocks":{"mega_menu_44XJkn":{"type":"mega_menu","settings":{"menu_item":"Home","images_position":"right","image_1":"shopify:\/\/shop_images\/474664959_17984454368788514_1797757600871311920_n..jpg","image_1_heading":"Main","image_1_text":"example","image_1_link":"","image_2":"shopify:\/\/shop_images\/485575502_17991610523788514_6172588932710564278_n.jpg","image_2_heading":"Main","image_2_text":"example","image_2_link":""}}},"block_order":["mega_menu_44XJkn"],"settings":{"color_scheme":"scheme-2","enable_sticky":true,"hide_on_scroll":true,"show_separation_border":true,"reduce_padding":true,"logo":"shopify:\/\/shop_images\/PH_logo-03.png","logo_max_width":90,"logo_mobile_max_width":20,"menu":"main-menu","sidebar_menu":"","menu_open_trigger":"hover","enable_search":true,"sidebar_color_scheme":"","sidebar_text_font":"heading","sidebar_show_dividers":true,"layout":"logo_center_navigation_inline","show_icons":true,"show_country_selector":true,"show_country_name":true,"show_country_flag":true,"show_locale_selector":true,"transparent_header_text_color":"#ffffff","transparent_logo":"shopify:\/\/shop_images\/PH_logo-10.png"}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_ia4Njn": {
+          "type": "message",
+          "settings": {
+            "text": "Soft living, worldwide."
+          }
+        },
+        "message_JXcdhE": {
+          "type": "message",
+          "settings": {
+            "text": "Crafted with care. Delivered with love."
+          }
+        },
+        "message_EUci9U": {
+          "type": "message",
+          "settings": {
+            "text": "Free shipping on orders over $100"
+          }
+        }
+      },
+      "block_order": [
+        "message_ia4Njn",
+        "message_JXcdhE",
+        "message_EUci9U"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "enable_sticky": true,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_44XJkn": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Home",
+            "images_position": "right",
+            "image_1": "shopify://shop_images/474664959_17984454368788514_1797757600871311920_n..jpg",
+            "image_1_heading": "Main",
+            "image_1_text": "example",
+            "image_1_link": "",
+            "image_2": "shopify://shop_images/485575502_17991610523788514_6172588932710564278_n.jpg",
+            "image_2_heading": "Main",
+            "image_2_text": "example",
+            "image_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_44XJkn"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "enable_sticky": true,
+        "hide_on_scroll": true,
+        "show_separation_border": true,
+        "reduce_padding": true,
+        "logo": "shopify://shop_images/IMG_1522.png",
+        "logo_max_width": 90,
+        "logo_mobile_max_width": 20,
+        "menu": "main-menu",
+        "sidebar_menu": "",
+        "menu_open_trigger": "hover",
+        "enable_search": true,
+        "sidebar_color_scheme": "",
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": true,
+        "layout": "logo_center_navigation_inline",
+        "show_icons": true,
+        "show_country_selector": true,
+        "show_country_name": true,
+        "show_country_flag": true,
+        "show_locale_selector": true,
+        "transparent_header_text_color": "#ffffff",
+        "transparent_logo": "shopify://shop_images/IMG_1523.png"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
