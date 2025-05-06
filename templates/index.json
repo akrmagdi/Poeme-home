@@ -69,6 +69,9 @@
         "image_WHayJc",
         "image_fgeDEX"
       ],
+      "custom_css": [
+        ".slideshow__next-section-button {display: none;}"
+      ],
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": true,
@@ -79,6 +82,28 @@
         "cycle_speed": 5,
         "background": "#000000",
         "controls_color": "#ffffff"
+      }
+    },
+    "rich_text_fTnCcq": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_fk4cnm": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h4>Welcome to Poeme Home where design is the essence of storytelling. We are a boutique destination<br/>for beautiful design. Offering a curated collection of unique products to provide an elevated sense of<br/>style to the story of your home.</h4>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_fk4cnm"
+      ],
+      "name": "Rich Text Section",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
       }
     },
     "featured_collections_pmHkV9": {
@@ -220,11 +245,12 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Classic_Collections.jpg",
             "column_count": "4",
-            "row_count": 2,
-            "title": "Sample 1",
+            "row_count": 1,
+            "title": "<strong>Classic Collection</strong>",
             "heading_tag": "h4",
-            "content": "<p><br/>Sample info</p>",
+            "content": "",
             "link_text": "shop now",
             "link_url": "",
             "link_style": "solid",
@@ -237,11 +263,12 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Limited_Editions.jpg",
             "column_count": "4",
-            "row_count": 2,
-            "title": "Sample 1",
+            "row_count": 1,
+            "title": "<strong>Limited Edition</strong>",
             "heading_tag": "h4",
-            "content": "<p><br/>Sample info</p>",
+            "content": "",
             "link_text": "shop now",
             "link_url": "",
             "link_style": "solid",
@@ -254,17 +281,18 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/The_Chateau_Edit_b0b34854-0c13-4424-a89e-ab929f52efbe.jpg",
             "column_count": "4",
-            "row_count": 2,
-            "title": "Sample 1",
+            "row_count": 1,
+            "title": "<strong>The Chateau Edit</strong>",
             "heading_tag": "h4",
-            "content": "<p><br/>Sample info</p>",
+            "content": "",
             "link_text": "shop now",
             "link_url": "",
             "link_style": "solid",
             "text_position": "place-self-end-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 17
           }
         }
       },
@@ -280,9 +308,9 @@
         "mobile_row_height": 180,
         "section_width": "lg",
         "spacing": "md",
-        "subheading": "with variety of marbles",
-        "title": "Choose Your Texture",
-        "content": "<p>Every thread tells a story.</p>"
+        "subheading": "",
+        "title": "<strong>Shop By Material</strong>",
+        "content": ""
       }
     },
     "before_after_j46xDi": {
@@ -691,6 +719,7 @@
   },
   "order": [
     "slideshow_bXHCgA",
+    "rich_text_fTnCcq",
     "featured_collections_pmHkV9",
     "scrolling_content_cxA8UB",
     "image_with_text_overlay_rC3MbW",
