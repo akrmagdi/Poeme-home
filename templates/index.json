@@ -149,6 +149,7 @@
         "image_6f7C6f": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_1526.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -170,6 +171,7 @@
         "image_HEbpB4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_1524.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
@@ -191,6 +193,7 @@
         "image_7Ahc6k": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_1525.jpg",
             "title": "Promote your products",
             "heading_tag": "h4",
             "link_url": "",
