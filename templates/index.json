@@ -12,52 +12,52 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide-1": {
+        "image_C8qghM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_1521.jpg",
-            "mobile_image": "shopify://shop_images/IMG_1521.jpg",
+            "image": "shopify://shop_images/Untitled_design_1.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Linen. Lived In.",
-            "title": "Woven from nature. Designed for everyday poetry.",
-            "heading_tag": "h3",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 14,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
         },
-        "image_83CyDX": {
+        "image_9cAbyp": {
           "type": "image",
           "settings": {
-            "content_max_width": 780,
+            "image": "shopify://shop_images/Untitled_design.png",
+            "content_max_width": 700,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Linen. Lived In.",
-            "title": "Woven from nature. Designed for everyday poetry.",
-            "heading_tag": "h3",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 14,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
         }
       },
       "block_order": [
-        "slide-1",
-        "image_83CyDX"
+        "image_C8qghM",
+        "image_9cAbyp"
       ],
       "settings": {
         "full_width": true,
@@ -70,6 +70,29 @@
         "cycle_speed": 6,
         "background": "#f2f2f2",
         "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+      }
+    },
+    "rich_text_VCmxmp": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_Jn43qr": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h6>Welcome to Poeme Home where design is the essence of storytelling. We are a boutique destination<br/>for beautiful design. Offering a curated collection of unique products to provide an elevated sense of<br/>style to the story of your home.</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_Jn43qr"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "large",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "featured_collection_CwjdMg": {
@@ -100,7 +123,7 @@
     "revealed_image_on_scroll_ztyt83": {
       "type": "revealed-image-on-scroll",
       "settings": {
-        "image": "shopify://shop_images/431460782_1080490096517475_9104006407877918221_n..jpg",
+        "image": "shopify://shop_images/landscape_or_portrait_use_layering_with_collage_1f68aedd-7723-439c-8c17-d3b14b94558c.jpg",
         "subheading": "care rituals, and timeless design.",
         "title": "on slow living",
         "background": "#fdfbfa",
@@ -111,12 +134,6 @@
     "rich_text_ejmVDW": {
       "type": "rich-text",
       "blocks": {
-        "subheading_DedpwU": {
-          "type": "subheading",
-          "settings": {
-            "text": "Choose Your Texture"
-          }
-        },
         "heading_VhwU6y": {
           "type": "heading",
           "settings": {
@@ -128,7 +145,6 @@
         }
       },
       "block_order": [
-        "subheading_DedpwU",
         "heading_VhwU6y"
       ],
       "custom_css": [
@@ -149,8 +165,8 @@
         "image_6f7C6f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_1526.jpg",
-            "title": "Promote your products",
+            "image": "shopify://shop_images/Classic_Collections.jpg",
+            "title": "Classic Collection",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -165,14 +181,14 @@
             "button_background": "#000000",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 17
           }
         },
         "image_HEbpB4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_1524.jpg",
-            "title": "Promote your products",
+            "image": "shopify://shop_images/The_Chateau_Edit_b0b34854-0c13-4424-a89e-ab929f52efbe.jpg",
+            "title": "The Chateau Edit",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -187,14 +203,14 @@
             "button_background": "#000000",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 17
           }
         },
         "image_7Ahc6k": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_1525.jpg",
-            "title": "Promote your products",
+            "image": "shopify://shop_images/Limited_Editions.jpg",
+            "title": "Limited Edition",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -209,7 +225,7 @@
             "button_background": "#000000",
             "button_text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 17
           }
         }
       },
@@ -820,6 +836,7 @@
   },
   "order": [
     "slideshow",
+    "rich_text_VCmxmp",
     "featured_collection_CwjdMg",
     "revealed_image_on_scroll_ztyt83",
     "rich_text_ejmVDW",
