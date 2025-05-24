@@ -33,6 +33,7 @@
         "message",
         "message_7zpt4V"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky": true,
         "autoplay": false,
