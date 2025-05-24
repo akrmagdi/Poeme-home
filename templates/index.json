@@ -121,14 +121,38 @@
         "product_card_text_color": ""
       }
     },
-    "revealed_image_on_scroll_ztyt83": {
-      "type": "revealed-image-on-scroll",
+    "image_with_text_overlay_ymrxy8": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "richtext_ECX3B8": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h4><strong>on slow living</strong></h4>"
+          }
+        },
+        "heading_wFgfmr": {
+          "type": "heading",
+          "settings": {
+            "text": "care rituals, and timeless design.",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_ECX3B8",
+        "heading_wFgfmr"
+      ],
+      "name": "Image with text overlay",
       "settings": {
-        "subheading": "care rituals, and timeless design.",
-        "title": "on slow living",
-        "background": "#fdfbfa",
-        "text_color_inside": "#f2f2f2",
-        "text_color_outside": "#000000"
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
       }
     },
     "rich_text_ejmVDW": {
@@ -821,7 +845,7 @@
     "slideshow",
     "rich_text_VCmxmp",
     "featured_collection_CwjdMg",
-    "revealed_image_on_scroll_ztyt83",
+    "image_with_text_overlay_ymrxy8",
     "rich_text_ejmVDW",
     "media_grid_RcYxij",
     "before_after_image_agcmDq",
