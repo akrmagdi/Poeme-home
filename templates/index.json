@@ -15,7 +15,8 @@
         "image_C8qghM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_1.png",
+            "image": "shopify://shop_images/Untitled_design_2.jpg",
+            "mobile_image": "shopify://shop_images/Untitled_design_1.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -36,7 +37,7 @@
         "image_9cAbyp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design.png",
+            "image": "shopify://shop_images/Untitled_design_3.jpg",
             "content_max_width": 700,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -123,7 +124,6 @@
     "revealed_image_on_scroll_ztyt83": {
       "type": "revealed-image-on-scroll",
       "settings": {
-        "image": "shopify://shop_images/landscape_or_portrait_use_layering_with_collage_1f68aedd-7723-439c-8c17-d3b14b94558c.jpg",
         "subheading": "care rituals, and timeless design.",
         "title": "on slow living",
         "background": "#fdfbfa",
@@ -187,7 +187,6 @@
         "image_HEbpB4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/The_Chateau_Edit_b0b34854-0c13-4424-a89e-ab929f52efbe.jpg",
             "title": "The Chateau Edit",
             "heading_tag": "h4",
             "link_url": "",
@@ -250,8 +249,6 @@
         "subheading": "Inspired by the Loom",
         "title": "Scenes to inspire your space.",
         "content": "",
-        "before_image": "shopify://shop_images/Verdi-_1.heic",
-        "after_image": "shopify://shop_images/White-_4.jpg",
         "expand_image": true,
         "text_position": "start",
         "before_after_text_position": "top",
@@ -364,7 +361,6 @@
         "image_4qB3c3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/483992356_17990702648788514_3327330826560501042_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -386,7 +382,6 @@
         "image_W9LBVq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/476278452_17985958151788514_1440534610454572390_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -426,7 +421,6 @@
         "image_LbzChN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/475834687_17985506678788514_2467537043049766581_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -448,7 +442,6 @@
         "image_qg9Hfx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/483508632_17990326463788514_2420004361363666330_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -509,7 +502,6 @@
         "image_gh3xct": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/485575502_17991610523788514_6172588932710564278_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -531,7 +523,6 @@
         "image_4QEgag": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/485575502_17991610523788514_6172588932710564278_n.jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -553,7 +544,6 @@
         "image_npwURG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/479970640_17987309159788514_3712479870012868963_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -594,7 +584,6 @@
         "image_p8pX7m": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/479970640_17987309159788514_3712479870012868963_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -616,7 +605,6 @@
         "image_9MKmg6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/483661256_17990326445788514_9876985516313123_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -638,7 +626,6 @@
         "image_eWGmF3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/476278452_17985958151788514_1440534610454572390_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -679,7 +666,6 @@
         "image_gaHDMD": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/469439097_1340126847148118_5566204623658179452_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -701,7 +687,6 @@
         "image_i7PmRk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/470350542_17979391448788514_5508553888794352178_n..jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -723,7 +708,6 @@
         "image_hC8fiC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/450909021_398880129863434_5844388540995194032_n__heic.jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -815,7 +799,6 @@
         "slide_Vr6YXR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/441168600_414788694810410_6833232958579009153_n..jpg",
             "navigation_label": "1953",
             "subheading": "Subheading",
             "title": "Heading",
