@@ -153,12 +153,13 @@
         "full_width": true,
         "allow_transparent_header": false,
         "enable_parallax": false,
-        "image_size": "auto",
+        "image_size": "md",
+        "image": "shopify://shop_images/Mobile_hero.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 17
       }
     },
     "rich_text_ejmVDW": {
@@ -198,7 +199,7 @@
             "image": "shopify://shop_images/Classic_Collections.jpg",
             "title": "Classic Collection",
             "heading_tag": "h4",
-            "link_url": "",
+            "link_url": "shopify://collections/classic-collection",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 2,
@@ -217,9 +218,10 @@
         "image_HEbpB4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/White.heic",
             "title": "The Chateau Edit",
             "heading_tag": "h4",
-            "link_url": "",
+            "link_url": "shopify://collections/limited-editions",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 2,
@@ -279,8 +281,10 @@
         "subheading": "Inspired by the Loom",
         "title": "Scenes to inspire your space.",
         "content": "",
+        "before_image": "shopify://shop_images/Rose5.jpg",
+        "after_image": "shopify://shop_images/White_2_-min.jpg",
         "expand_image": true,
-        "text_position": "start",
+        "text_position": "center",
         "before_after_text_position": "top",
         "before_text": "",
         "after_text": "",
