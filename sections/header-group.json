@@ -38,6 +38,7 @@
         "message_JXcdhE",
         "message_EUci9U"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "enable_sticky": true,
@@ -55,11 +56,9 @@
           "settings": {
             "menu_item": "Home",
             "images_position": "right",
-            "image_1": "shopify://shop_images/474664959_17984454368788514_1797757600871311920_n..jpg",
             "image_1_heading": "Main",
             "image_1_text": "example",
             "image_1_link": "",
-            "image_2": "shopify://shop_images/485575502_17991610523788514_6172588932710564278_n.jpg",
             "image_2_heading": "Main",
             "image_2_text": "example",
             "image_2_link": ""
@@ -76,7 +75,6 @@
         "hide_on_scroll": false,
         "show_separation_border": true,
         "reduce_padding": false,
-        "logo": "shopify://shop_images/IMG_1522.png",
         "logo_max_width": 130,
         "logo_mobile_max_width": 90,
         "menu": "main-menu",
@@ -92,8 +90,7 @@
         "show_country_name": true,
         "show_country_flag": true,
         "show_locale_selector": true,
-        "transparent_header_text_color": "#ffffff",
-        "transparent_logo": "shopify://shop_images/IMG_1523.png"
+        "transparent_header_text_color": "#ffffff"
       }
     }
   },
