@@ -68,14 +68,17 @@
       "block_order": [
         "mega_menu_44XJkn"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".header {padding: 0.4rem 1.4rem;}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "enable_sticky": true,
         "hide_on_scroll": false,
         "show_separation_border": true,
         "reduce_padding": false,
-        "logo_max_width": 130,
+        "logo": "shopify://shop_images/PH_logo_2_.ai_2.svg",
+        "logo_max_width": 105,
         "logo_mobile_max_width": 90,
         "menu": "main-menu",
         "sidebar_menu": "",
