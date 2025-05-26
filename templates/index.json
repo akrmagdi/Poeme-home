@@ -305,48 +305,22 @@
     "shop_the_look_nMeH8m": {
       "type": "shop-the-look",
       "blocks": {
-        "product_dJpHa6": {
-          "type": "product",
-          "settings": {
-            "product": "the-lanvin-catchall",
-            "horizontal_position": 21,
-            "vertical_position": 50
-          }
-        },
         "product_4Q7iYm": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "laurent-xl-bowl",
             "horizontal_position": 63,
-            "vertical_position": 55
-          }
-        },
-        "product_XGWjQf": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "horizontal_position": 33,
-            "vertical_position": 73
-          }
-        },
-        "product_4TpKYp": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "horizontal_position": 53,
-            "vertical_position": 90
+            "vertical_position": 66
           }
         }
       },
       "block_order": [
-        "product_dJpHa6",
-        "product_4Q7iYm",
-        "product_XGWjQf",
-        "product_4TpKYp"
+        "product_4Q7iYm"
       ],
       "settings": {
         "full_width": true,
         "stack_mobile": true,
+        "image": "shopify://shop_images/474001053_17983555655788514_2336286559214810428_n.jpg",
         "title": "Whispers from the Loom",
         "content": "",
         "background": "#fdfbfa",
