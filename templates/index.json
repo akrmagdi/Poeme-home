@@ -197,8 +197,9 @@
         "heading_yWVUjF"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "image_size": "md",
+        "image": "shopify://shop_images/Option1landscape.heic",
         "allow_transparent_header": false,
         "reveal_on_scroll": true,
         "remove_vertical_spacing": true,
@@ -280,6 +281,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Verdi_1_-min_1cd789a2-1fbb-4d5e-9e6a-445335b8ffe8.jpg",
             "column_count": "4",
             "row_count": 1,
             "title": "<strong>The Chateau Edit</strong>",
