@@ -276,6 +276,7 @@
     },
     "before_after_image_agcmDq": {
       "type": "before-after-image",
+      "disabled": true,
       "settings": {
         "full_width": true,
         "subheading": "Inspired by the Loom",
@@ -283,8 +284,8 @@
         "content": "",
         "before_image": "shopify://shop_images/Rose5.jpg",
         "after_image": "shopify://shop_images/White_2_-min.jpg",
-        "expand_image": true,
-        "text_position": "center",
+        "expand_image": false,
+        "text_position": "start",
         "before_after_text_position": "top",
         "before_text": "",
         "after_text": "",
@@ -366,87 +367,6 @@
         "background": "",
         "background_gradient": "",
         "text_color": ""
-      }
-    },
-    "media_grid_3n3UUr": {
-      "type": "media-grid",
-      "blocks": {
-        "image_icYwXW": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_4qB3c3": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_W9LBVq": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_icYwXW",
-        "image_4qB3c3",
-        "image_W9LBVq"
-      ],
-      "settings": {
-        "full_width": true,
-        "reduce_width": false,
-        "desktop_row_height": 290,
-        "mobile_row_height": 150,
-        "background": "",
-        "background_gradient": ""
       }
     },
     "media_grid_KHaiXk": {
@@ -776,57 +696,6 @@
         "background_gradient": ""
       }
     },
-    "press_HnTeV8": {
-      "type": "press",
-      "blocks": {
-        "quote_cVMC6Y": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
-            "show_rating": true,
-            "rating": 4
-          }
-        },
-        "quote_GW86wF": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
-            "show_rating": true,
-            "rating": 4
-          }
-        },
-        "quote_qUD6PK": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Write some content about what they says about your store.",
-            "show_rating": true,
-            "rating": 4
-          }
-        }
-      },
-      "block_order": [
-        "quote_cVMC6Y",
-        "quote_GW86wF",
-        "quote_qUD6PK"
-      ],
-      "settings": {
-        "full_width": true,
-        "content_size": "medium",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
-      }
-    },
     "timeline_NG4XC8": {
       "type": "timeline",
       "blocks": {
@@ -861,12 +730,10 @@
     "before_after_image_agcmDq",
     "shop_the_look_nMeH8m",
     "1745289393d750f675",
-    "media_grid_3n3UUr",
     "media_grid_KHaiXk",
     "media_grid_FLtwVJ",
     "media_grid_hajmJY",
     "media_grid_7diTDe",
-    "press_HnTeV8",
     "timeline_NG4XC8"
   ]
 }
