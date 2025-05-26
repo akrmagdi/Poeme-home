@@ -112,9 +112,9 @@
         "collection_fNn63J": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "classic-collection",
             "products_count": 8,
-            "title": "MARBLE PALETTE",
+            "title": "Classic Collection",
             "link_url": "",
             "link_text": "View all"
           }
@@ -122,9 +122,9 @@
         "collection_XR6tJm": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "the-chateau-edit",
             "products_count": 8,
-            "title": "furniture",
+            "title": "The Chateau Edit",
             "link_url": "",
             "link_text": "View all"
           }
