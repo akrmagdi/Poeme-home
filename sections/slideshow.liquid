@@ -97,7 +97,7 @@ LIQUID
                   <img src="{{ block.settings.overlay_svg | image_url }}"
                     alt="Overlay SVG"
                     class="slideshow-overlay-svg slideshow-overlay-svg--{{ block.settings.overlay_svg_position }}"
-                    style="position:absolute;left:0;right:0;{{ overlay_svg_position_style | strip }}margin-left:auto;margin-right:auto;fill:{{ block.settings.overlay_svg_fill }};pointer-events:none;max-width:100%;height:auto;z-index:2;"
+                    style="position:absolute;left:0;right:0;{{ overlay_svg_position_style | strip }}margin-left:auto;margin-right:auto;fill:{{ block.settings.overlay_svg_fill }};pointer-events:none;width:{{ block.settings.overlay_svg_size }}vw;max-width:100%;height:auto;z-index:2;"
                   >
                 {%- endif -%}
               </div>
@@ -591,6 +591,16 @@ LIQUID
             { "value": "bottom", "label": "Bottom" }
           ],
           "default": "center"
+        },
+        {
+          "type": "range",
+          "id": "overlay_svg_size",
+          "label": "Overlay SVG width (vw)",
+          "min": 1,
+          "max": 50,
+          "step": 1,
+          "unit": "vw",
+          "default": 10
         }
       ]
     },

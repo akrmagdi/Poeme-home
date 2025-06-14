@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_design_2.jpg",
             "mobile_image": "shopify://shop_images/Untitled_design_1.jpg",
-            "content_max_width": 780,
+            "content_max_width": 1200,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
@@ -31,7 +31,10 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "background": "",
-            "background_gradient": ""
+            "background_gradient": "",
+            "overlay_svg": "shopify://shop_images/PH_logo_2_.ai_5.svg",
+            "overlay_svg_fill": "#000000",
+            "overlay_svg_position": "center"
           }
         },
         "image_9cAbyp": {
@@ -52,7 +55,9 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "background": "",
-            "background_gradient": ""
+            "background_gradient": "",
+            "overlay_svg_fill": "#000000",
+            "overlay_svg_position": "center"
           }
         }
       },
