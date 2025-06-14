@@ -69,9 +69,7 @@ LIQUID
 
           {%- if block.type == 'image' -%}
             {%- if block.settings.image != blank -%}
-              {%- capture loading_strategy -%}{% if forloop.first %}eager{% else %}lazy{% endif %}{%- endcapture -%}
-              {%- capture fetch_priority -%}{% if forloop.first %}high{% else %}low{% endif %}{%- endcapture -%}
-              <div class="slideshow-media-wrapper" style="position:relative;">
+              <div style="position:relative;">
                 <picture>
                   {%- if block.settings.mobile_image != blank -%}
                     <source
@@ -96,8 +94,7 @@ LIQUID
                   {%- endcapture -%}
                   <img src="{{ block.settings.overlay_svg | image_url }}"
                     alt="Overlay SVG"
-                    class="slideshow-overlay-svg slideshow-overlay-svg--{{ block.settings.overlay_svg_position }}"
-                    style="position:absolute;left:0;right:0;{{ overlay_svg_position_style | strip }}margin-left:auto;margin-right:auto;fill:{{ block.settings.overlay_svg_fill }};pointer-events:none;width:{{ block.settings.overlay_svg_size }}vw;max-width:100%;height:auto;z-index:2;"
+                    style="position:absolute;left:0;right:0;{{ overlay_svg_position_style | strip }}margin-left:auto;margin-right:auto;width:{{ block.settings.overlay_svg_size | default: 10 }}vw;max-width:100%;height:auto;z-index:2;pointer-events:none;"
                   >
                 {%- endif -%}
               </div>
@@ -564,43 +561,6 @@ LIQUID
           "type": "color_background",
           "id": "background_gradient",
           "label": "Background gradient"
-        },
-        {
-          "type": "header",
-          "content": "Overlay SVG"
-        },
-        {
-          "type": "image_picker",
-          "id": "overlay_svg",
-          "label": "Overlay SVG image",
-          "info": "Upload an SVG file to overlay on top of the slide image."
-        },
-        {
-          "type": "color",
-          "id": "overlay_svg_fill",
-          "label": "Overlay SVG fill color",
-          "default": "#000000"
-        },
-        {
-          "type": "select",
-          "id": "overlay_svg_position",
-          "label": "Overlay SVG position",
-          "options": [
-            { "value": "center", "label": "Center" },
-            { "value": "top", "label": "Top" },
-            { "value": "bottom", "label": "Bottom" }
-          ],
-          "default": "center"
-        },
-        {
-          "type": "range",
-          "id": "overlay_svg_size",
-          "label": "Overlay SVG width (vw)",
-          "min": 1,
-          "max": 50,
-          "step": 1,
-          "unit": "vw",
-          "default": 10
         }
       ]
     },
