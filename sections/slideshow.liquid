@@ -547,6 +547,39 @@ LIQUID
           "type": "color_background",
           "id": "background_gradient",
           "label": "Background gradient"
+        },
+        {
+          "type": "image_picker",
+          "id": "overlay_svg",
+          "label": "Overlay SVG image",
+          "info": "Upload an SVG to overlay above the image."
+        },
+        {
+          "type": "color",
+          "id": "overlay_svg_fill",
+          "label": "Overlay SVG fill color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "overlay_svg_position",
+          "label": "Overlay SVG position",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "range",
+          "id": "overlay_svg_size",
+          "label": "Overlay SVG size (vw)",
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "unit": "vw",
+          "default": 20
         }
       ]
     },
