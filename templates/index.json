@@ -40,11 +40,13 @@
         "image_9cAbyp": {
           "type": "image",
           "settings": {
-            "overlay_position": "center",
-            "overlay_width": 30,
+            "overlay_image": "shopify://shop_images/PH_logo_2_.ai_7.svg",
+            "overlay_position": "bottom",
+            "overlay_width": 85,
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "image": "shopify://shop_images/Untitled_design_3.jpg",
+            "overlay_opacity": 19,
+            "image": "shopify://shop_images/living_image_hero_2_option.jpg",
+            "mobile_image": "shopify://shop_images/470032406_17979391466788514_7493222208137577803_n.jpg",
             "content_max_width": 700,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
