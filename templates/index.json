@@ -34,7 +34,8 @@
             "background_gradient": "",
             "overlay_svg": "shopify://shop_images/PH_logo_2_.ai_5.svg",
             "overlay_svg_fill": "#000000",
-            "overlay_svg_position": "center"
+            "overlay_svg_position": "center",
+            "overlay_svg_size": 22
           }
         },
         "image_9cAbyp": {
@@ -57,7 +58,8 @@
             "background": "",
             "background_gradient": "",
             "overlay_svg_fill": "#000000",
-            "overlay_svg_position": "center"
+            "overlay_svg_position": "center",
+            "overlay_svg_size": 10
           }
         }
       },
