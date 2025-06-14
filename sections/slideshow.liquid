@@ -547,6 +547,33 @@ LIQUID
           "type": "color_background",
           "id": "background_gradient",
           "label": "Background gradient"
+        },
+        {
+          "type": "header",
+          "content": "Overlay SVG"
+        },
+        {
+          "type": "image_picker",
+          "id": "overlay_svg",
+          "label": "Overlay SVG image",
+          "info": "Upload an SVG file to overlay on top of the slide image."
+        },
+        {
+          "type": "color",
+          "id": "overlay_svg_fill",
+          "label": "Overlay SVG fill color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "overlay_svg_position",
+          "label": "Overlay SVG position",
+          "options": [
+            { "value": "center", "label": "Center" },
+            { "value": "top", "label": "Top" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "center"
         }
       ]
     },
