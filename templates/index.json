@@ -15,6 +15,10 @@
         "image_C8qghM": {
           "type": "image",
           "settings": {
+            "overlay_image": "shopify://shop_images/PH_logo_2_.ai_5.svg",
+            "overlay_position": "center",
+            "overlay_width": 90,
+            "overlay_fill": "#f83a3a",
             "image": "shopify://shop_images/Untitled_design_2.jpg",
             "mobile_image": "shopify://shop_images/Untitled_design_1.jpg",
             "content_max_width": 1200,
@@ -31,16 +35,15 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "background": "",
-            "background_gradient": "",
-            "overlay_svg": "shopify://shop_images/PH_logo_2_.ai_5.svg",
-            "overlay_svg_fill": "#000000",
-            "overlay_svg_position": "center",
-            "overlay_svg_size": 22
+            "background_gradient": ""
           }
         },
         "image_9cAbyp": {
           "type": "image",
           "settings": {
+            "overlay_position": "center",
+            "overlay_width": 30,
+            "overlay_fill": "#000000",
             "image": "shopify://shop_images/Untitled_design_3.jpg",
             "content_max_width": 700,
             "mobile_text_position": "place-self-center text-center",
@@ -56,10 +59,7 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "background": "",
-            "background_gradient": "",
-            "overlay_svg_fill": "#000000",
-            "overlay_svg_position": "center",
-            "overlay_svg_size": 10
+            "background_gradient": ""
           }
         }
       },
