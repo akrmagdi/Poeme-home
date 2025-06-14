@@ -95,7 +95,7 @@ LIQUID
                 ">
                   <img src="{{ block.settings.overlay_image | image_url }}" 
                        alt="{{ block.settings.overlay_image.alt | escape }}"
-                       style="width: 100%; height: auto; {% if block.settings.overlay_image contains '.svg' %}fill: {{ block.settings.overlay_fill }};{% endif %}">
+                       style="width: 100%; height: auto;">
                 </div>
               {%- endif -%}
 
@@ -398,9 +398,19 @@ LIQUID
         },
         {
           "type": "color",
-          "id": "overlay_fill",
-          "label": "Overlay Fill Color",
+          "id": "overlay_color",
+          "label": "Overlay",
           "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 30
         },
         {
           "type": "image_picker",
@@ -588,22 +598,6 @@ LIQUID
           "id": "button_text_color",
           "label": "Button text",
           "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "Overlay",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "label": "Overlay opacity",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 30
         },
         {
           "type": "header",
