@@ -95,7 +95,7 @@ LIQUID
                 ">
                   <img src="{{ block.settings.overlay_image | image_url }}" 
                        alt="{{ block.settings.overlay_image.alt | escape }}"
-                       style="width: 100%; height: auto; object-fit: {{ block.settings.overlay_fill }};">
+                       style="width: 100%; height: auto; {% if block.settings.overlay_image contains '.svg' %}fill: {{ block.settings.overlay_fill }};{% endif %}">
                 </div>
               {%- endif -%}
 
@@ -397,24 +397,10 @@ LIQUID
           "default": 30
         },
         {
-          "type": "select",
+          "type": "color",
           "id": "overlay_fill",
-          "label": "Overlay Fill",
-          "options": [
-            {
-              "value": "contain",
-              "label": "Contain"
-            },
-            {
-              "value": "cover",
-              "label": "Cover"
-            },
-            {
-              "value": "fill",
-              "label": "Fill"
-            }
-          ],
-          "default": "contain"
+          "label": "Overlay Fill Color",
+          "default": "#000000"
         },
         {
           "type": "image_picker",
