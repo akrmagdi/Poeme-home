@@ -67,6 +67,33 @@ LIQUID
           {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
           {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}min({{ settings.page_width }}px, 100vw){% endif %}{%- endcapture -%}
 
+          {%- if block.settings.overlay_image != blank -%}
+            <div class="overlay-image-container" style="
+              position: absolute;
+              width: {{ block.settings.overlay_width }}vw;
+              height: auto;
+              {% case block.settings.overlay_position %}
+                {% when 'top' %}
+                  top: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                {% when 'center' %}
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                {% when 'bottom' %}
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+              {% endcase %}
+              z-index: 2;
+            ">
+              <img src="{{ block.settings.overlay_image | image_url }}" 
+                   alt="{{ block.settings.overlay_image.alt | escape }}"
+                   style="width: 100%; height: auto;">
+            </div>
+          {%- endif -%}
+
           {%- if block.type == 'image' -%}
             {%- if block.settings.image != blank or block.settings.mobile_image != blank -%}
               <picture>
