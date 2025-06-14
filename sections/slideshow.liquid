@@ -100,16 +100,23 @@ LIQUID
               {%- endif -%}
 
               <picture>
-                {%- if block.settings.mobile_image != blank -%}
-                  <source
-                    media="(max-width: 699px)"
-                    srcset="{{ block.settings.image | image_url: 'master' }} 1x"
-                    width="{{ block.settings.image.width }}"
-                    height="{{ block.settings.image.height }}"
-                  >
-                {%- endif -%}
-
+                <source
+                  media="(max-width: 699px)"
+                  srcset="{{ block.settings.image | image_url: 'master' }} 1x"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
                 {{- block.settings.image | image_url: 'master' | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: sizes -}}
+              </picture>
+            {%- elsif block.settings.mobile_image != blank -%}
+              <picture>
+                <source
+                  media="(max-width: 699px)"
+                  srcset="{{ block.settings.mobile_image | image_url: 'master' }} 1x"
+                  width="{{ block.settings.mobile_image.width }}"
+                  height="{{ block.settings.mobile_image.height }}"
+                >
+                {{- block.settings.mobile_image | image_url: 'master' | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: sizes -}}
               </picture>
             {%- else -%}
               {%- capture placeholder_image -%}{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
