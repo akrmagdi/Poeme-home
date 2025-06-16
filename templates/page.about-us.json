@@ -22,17 +22,18 @@
         "image_KpHmrn": {
           "type": "image",
           "settings": {
-            "media_width": 50,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
+            "image": "shopify://shop_images/White_ff9bc65a-8832-4d06-9eb5-f18caf5ada80.webp",
+            "media_width": 35,
+            "media_position": "end",
+            "text_position": "place-self-center-start text-start",
             "icon": "none",
-            "icon_width": 48,
+            "icon_width": 120,
             "subheading": "",
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "title": "ABOUT US",
+            "content": "<p>Just as a poet selects words for their beauty and sound and arranges them to<br/>tell a story, we believe your home tells a story, through the objects and<br/>elements that are arranged together in a space. Welcome to Poeme Home,<br/>where design is the essence of storytelling.<br/><br/>We are a boutique destination for beautiful design, offering a curated<br/>collection of unique products designed both in house and sourced from<br/>across the globe, to provide an elevated sense of style to the story of your<br/>home. With an emphasis on objects of beauty, refined luxury and enduring<br/>style, our aim is to bring you designs that offer luxurious materials, rich<br/>textures and harmonious colour palettes that will bring joy to your everyday.<br/><br/>We hope you enjoy exploring the beauty and elegance on offer at Poeme<br/>Home and we welcome you into our world. xx</p>",
             "link_text": "",
             "link_url": "",
-            "background": "#f0f0f0",
+            "background": "#fdfbfa",
             "background_gradient": "",
             "text_color": "#333333",
             "text_gradient": "",
@@ -47,7 +48,7 @@
       "name": "Media with text",
       "settings": {
         "full_width": true,
-        "alternate_media_position": true,
+        "alternate_media_position": false,
         "spacing": "small"
       }
     }
