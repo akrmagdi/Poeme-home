@@ -92,7 +92,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
+            "title": "About us",
             "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
             "enable_follow_on_shop": false
           }
