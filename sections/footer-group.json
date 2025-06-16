@@ -111,8 +111,8 @@
           "type": "links",
           "settings": {
             "menu": "main-menu",
-            "show_menu_title": false,
-            "menu_title": ""
+            "show_menu_title": true,
+            "menu_title": "DISCOVER"
           }
         }
       },
