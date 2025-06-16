@@ -16,6 +16,51 @@
         "content_width": "80ch"
       }
     },
+    "slideshow_mTVf9Y": {
+      "type": "slideshow",
+      "blocks": {
+        "image_TFtn7e": {
+          "type": "image",
+          "settings": {
+            "overlay_position": "center",
+            "overlay_width": 30,
+            "overlay_color": "#000000",
+            "overlay_opacity": 14,
+            "image": "shopify://shop_images/Marble_flatlay1_-_add_tagline.heic",
+            "mobile_image": "shopify://shop_images/Collage1_83f6ab9b-3ca8-4bc9-a0d4-23bb6302e422.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h3",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_TFtn7e"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "sm",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#F2F2F2",
+        "background_gradient": ""
+      }
+    },
     "media_with_text_ch3qrV": {
       "type": "media-with-text",
       "blocks": {
@@ -94,7 +139,7 @@
         "image_TTqGTg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/landscape_or_portrait_use_layering_with_collage_cd21ebe4-acd6-4588-a98a-ae91d11e10dd.jpg",
+            "image": "shopify://shop_images/470032406_17979391466788514_7493222208137577803_n.jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
@@ -153,6 +198,7 @@
   },
   "order": [
     "main",
+    "slideshow_mTVf9Y",
     "media_with_text_ch3qrV",
     "media_with_text_wUwWGN",
     "media_grid_A6tcPU"
