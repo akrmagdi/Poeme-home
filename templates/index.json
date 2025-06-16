@@ -443,10 +443,11 @@
         "slide_Vr6YXR": {
           "type": "slide",
           "settings": {
-            "navigation_label": "1953",
-            "subheading": "Subheading",
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "image": "shopify://shop_images/Collage1.jpg",
+            "navigation_label": "",
+            "subheading": "",
+            "title": "POEME HOME",
+            "content": "<p>Just as a poet selects words for their beauty and sound and arranges them to<br/>tell a story, we believe your home tells a story, through the objects and<br/>elements that are arranged together in a space. Welcome to Poeme Home,<br/>where design is the essence of storytelling.<br/><br/>We hope you enjoy exploring the beauty and elegance on offer at Poeme<br/>Home and we welcome you into our world. xx</p>"
           }
         }
       },
