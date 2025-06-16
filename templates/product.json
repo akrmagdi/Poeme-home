@@ -96,64 +96,6 @@
         "input_text_color": ""
       }
     },
-    "accordion_content_x7jzcL": {
-      "type": "accordion-content",
-      "blocks": {
-        "item_tgEzmn": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Question 1",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
-            "page": ""
-          }
-        },
-        "item_Ayqj6A": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Question 2",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
-            "page": ""
-          }
-        },
-        "item_VbbFVX": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Question 3",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_tgEzmn",
-        "item_Ayqj6A",
-        "item_VbbFVX"
-      ],
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "Heading",
-        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -179,7 +121,6 @@
   },
   "order": [
     "main",
-    "accordion_content_x7jzcL",
     "related-products"
   ]
 }
