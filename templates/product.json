@@ -12,19 +12,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {
             "heading_tag": "h2"
           }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -32,18 +24,19 @@
             "show_taxes_notice": false
           }
         },
-        "rating": {
-          "type": "rating",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
-            "show_empty": false
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
+        "quantity_selector": {
+          "type": "quantity_selector",
           "settings": {}
         },
         "description": {
@@ -64,21 +57,6 @@
             "page": ""
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -92,17 +70,12 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "badges",
         "price",
-        "rating",
-        "payment_terms",
-        "separator",
-        "description",
-        "collapsible_text_AiAKg7",
         "variant_picker",
         "quantity_selector",
+        "description",
+        "collapsible_text_AiAKg7",
         "buy_buttons"
       ],
       "settings": {
