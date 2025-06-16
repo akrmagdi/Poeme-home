@@ -22,7 +22,7 @@
         "image_KpHmrn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/White_ff9bc65a-8832-4d06-9eb5-f18caf5ada80.webp",
+            "image": "shopify://shop_images/Collage1_dd25f501-a3d8-4141-849c-e9b6a30690d1.jpg",
             "media_width": 35,
             "media_position": "end",
             "text_position": "place-self-center-start text-start",
@@ -58,7 +58,7 @@
         "image_QhqQPH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Verdi_979d5da2-fb02-4c9c-bf5c-1902978240a8.webp",
+            "image": "shopify://shop_images/Collage2_158d7685-0527-4595-890a-2b50da58a1a8.jpg",
             "media_width": 35,
             "media_position": "start",
             "text_position": "place-self-center-start text-start",
@@ -94,7 +94,7 @@
         "image_TTqGTg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/488987686_17993503211788514_7114943581250727425_n.jpg",
+            "image": "shopify://shop_images/landscape_or_portrait_use_layering_with_collage_cd21ebe4-acd6-4588-a98a-ae91d11e10dd.jpg",
             "title": "",
             "heading_tag": "h4",
             "link_url": "",
