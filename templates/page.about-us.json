@@ -60,7 +60,7 @@
           "settings": {
             "image": "shopify://shop_images/Verdi_979d5da2-fb02-4c9c-bf5c-1902978240a8.webp",
             "media_width": 35,
-            "media_position": "end",
+            "media_position": "start",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
             "icon_width": 120,
