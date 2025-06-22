@@ -315,14 +315,41 @@
         "product_4Q7iYm": {
           "type": "product",
           "settings": {
-            "product": "laurent-xl-bowl",
-            "horizontal_position": 63,
-            "vertical_position": 66
+            "product": "laurent-xl-bowl-beige-travertine-bowls",
+            "horizontal_position": 25,
+            "vertical_position": 51
+          }
+        },
+        "product_W6r4LM": {
+          "type": "product",
+          "settings": {
+            "product": "laurent-xl-bowl-1",
+            "horizontal_position": 43,
+            "vertical_position": 76
+          }
+        },
+        "product_ieqKK9": {
+          "type": "product",
+          "settings": {
+            "product": "laurent-xl-bowl-calacatta-viola-marble-cream-rose-marble",
+            "horizontal_position": 58,
+            "vertical_position": 64
+          }
+        },
+        "product_fKrjb7": {
+          "type": "product",
+          "settings": {
+            "product": "laurent-xl-bowl-nero-portoro-marble-and-biege-travertine",
+            "horizontal_position": 51,
+            "vertical_position": 91
           }
         }
       },
       "block_order": [
-        "product_4Q7iYm"
+        "product_4Q7iYm",
+        "product_W6r4LM",
+        "product_ieqKK9",
+        "product_fKrjb7"
       ],
       "settings": {
         "full_width": true,
