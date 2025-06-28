@@ -41,7 +41,7 @@
           "type": "image",
           "settings": {
             "overlay_image": "shopify://shop_images/PH_logo_2_.ai_7.svg",
-            "overlay_position": "bottom",
+            "overlay_position": "center",
             "overlay_width": 85,
             "overlay_color": "#000000",
             "overlay_opacity": 0,
