@@ -25,7 +25,7 @@
             "overlay_position": "center",
             "overlay_width": 30,
             "overlay_color": "#000000",
-            "overlay_opacity": 15,
+            "overlay_opacity": 0,
             "image": "shopify://shop_images/Option1landscape.jpg",
             "mobile_image": "shopify://shop_images/Option2Portrait.jpg",
             "content_max_width": 780,
@@ -57,7 +57,7 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#F2F2F2",
+        "background": "#f2f2f2",
         "background_gradient": ""
       }
     },
@@ -65,8 +65,8 @@
       "type": "contact",
       "settings": {
         "full_width": true,
-        "subheading": "Contact Us",
-        "title": "Do you have any question?",
+        "subheading": "",
+        "title": "Enquire here",
         "content": "",
         "text_position": "start",
         "contact_form_size": "large",
