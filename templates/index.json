@@ -41,7 +41,7 @@
           "type": "image",
           "settings": {
             "overlay_image": "shopify://shop_images/PH_logo_2_.ai_7.svg",
-            "overlay_position": "center",
+            "overlay_position": "bottom",
             "overlay_width": 85,
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -86,7 +86,7 @@
         "richtext_Jn43qr": {
           "type": "richtext",
           "settings": {
-            "content": "<h6>Welcome to Poeme Home where design is the essence of storytelling. We are a boutique destination<br/>for beautiful design. Offering a curated collection of unique products to provide an elevated sense of<br/>style to the story of your home.</h6>"
+            "content": "<h6>Welcome to Poeme Home. We are a boutique destination<br/>for beautiful design. Offering a curated collection of unique products to provide an elevated sense of<br/>style to the story of your home.</h6>"
           }
         }
       },
