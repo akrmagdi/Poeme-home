@@ -140,13 +140,13 @@
         "richtext_ECX3B8": {
           "type": "richtext",
           "settings": {
-            "content": "<h4><strong>on slow living</strong></h4>"
+            "content": "<h4><strong>elevated living</strong></h4>"
           }
         },
         "heading_wFgfmr": {
           "type": "heading",
           "settings": {
-            "text": "care rituals, and timeless design.",
+            "text": "Beauty, Luxury and style",
             "heading_tag": "h1"
           }
         }
@@ -357,7 +357,7 @@
         "image": "shopify://shop_images/474001053_17983555655788514_2336286559214810428_n.jpg",
         "title": "Whispers from the Loom",
         "content": "",
-        "background": "#fdfbfa",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
@@ -472,9 +472,9 @@
           "settings": {
             "image": "shopify://shop_images/Collage1.jpg",
             "navigation_label": "",
-            "subheading": "Alison MacCormick",
-            "title": "POEME HOME",
-            "content": "<p>Just as a poet selects words for their beauty and sound and arranges them to tell a story, we believe your home tells a story, through the objects and<br/>elements that are arranged together in a space. Welcome to Poeme Home,<br/>where design is the essence of storytelling.<br/><br/>We hope you enjoy exploring the beauty and elegance on offer at Poeme<br/>Home and we welcome you into our world. xx</p>"
+            "subheading": "",
+            "title": "design that brings joy",
+            "content": "<p><em><strong>“I love how good design can elevate your daily experiences<br/>and I especially love the way beautiful design can make you feel. Just like a<br/>poeme design can lift your spirit and transport you to another place.</strong></em><strong>” Alison MacCormick</strong></p><p><strong> </strong></p>"
           }
         }
       },
