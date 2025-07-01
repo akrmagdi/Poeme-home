@@ -203,7 +203,7 @@
         "image_6f7C6f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Classic_Collections.jpg",
+            "image": "shopify://shop_images/Portrait.heic",
             "title": "Classic Collection",
             "heading_tag": "h4",
             "link_url": "shopify://collections/classic-collection",
