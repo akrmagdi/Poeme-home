@@ -23,14 +23,14 @@
           "type": "item",
           "settings": {
             "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "content": "<p>Currently no.  However we hope in the near future to reach our overseas friends. Please stay in touch to be notified when overseas shipping becomes available.  </p>"
           }
         },
         "item_r6Uhhk": {
           "type": "item",
           "settings": {
             "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "content": "<p>It depends on where you are. Orders processed in Australia will take 5-7 business days to arrive.  Delivery details will be provided in your confirmation email.</p>"
           }
         },
         "item_DbJDcJ": {
