@@ -203,7 +203,7 @@
         "image_6f7C6f": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IMG_7089.jpg",
+            "image": "shopify://shop_images/IMG_7089_2.jpg",
             "title": "Classic Collection",
             "heading_tag": "h4",
             "link_url": "shopify://collections/classic-collection",
@@ -225,7 +225,7 @@
         "image_HEbpB4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/The_Chateau_Edit.jpg",
+            "image": "shopify://shop_images/IMG_7067.jpg",
             "title": "The Chateau Edit",
             "heading_tag": "h4",
             "link_url": "shopify://collections/limited-editions",
