@@ -460,7 +460,7 @@
         "reduce_width": false,
         "desktop_row_height": 290,
         "mobile_row_height": 150,
-        "background": "",
+        "background": "#fdfbfa",
         "background_gradient": ""
       }
     },
@@ -483,7 +483,7 @@
       ],
       "settings": {
         "full_width": true,
-        "background": "",
+        "background": "#fdfbfa",
         "background_gradient": "",
         "text_color": ""
       }
