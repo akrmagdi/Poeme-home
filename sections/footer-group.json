@@ -102,7 +102,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About us",
+            "title": "",
             "content": "<p>We believe in elevating the everyday with BEAUTIFUL DESIGN. <br/></p>",
             "enable_follow_on_shop": false
           }
