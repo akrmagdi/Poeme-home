@@ -44,7 +44,7 @@
             "overlay_position": "center",
             "overlay_width": 85,
             "overlay_color": "#000000",
-            "overlay_opacity": 18,
+            "overlay_opacity": 15,
             "image": "shopify://shop_images/Updated_bright_living_image_hero_2_option_1.jpg",
             "mobile_image": "shopify://shop_images/Mobile_hero_1.jpg",
             "content_max_width": 700,
