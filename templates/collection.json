@@ -30,6 +30,46 @@
         "overlay_opacity": 10
       }
     },
+    "rich_text_tXdRhy": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_7W9PKi": {
+          "type": "subheading",
+          "settings": {
+            "text": "Where Classic Style Meets Contemporary Beauty"
+          }
+        },
+        "heading_w9BxyQ": {
+          "type": "heading",
+          "settings": {
+            "text": "",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_HjpXmD": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>This collection celebrates classic design. Where harmony, symmetry and proportion meet a refined, contemporary aesthetic. Thoughtfully crafted fro the modern home and designed to captivate for years to come. </p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_7W9PKi",
+        "heading_w9BxyQ",
+        "richtext_HjpXmD"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "#fdfbfa",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -47,6 +87,7 @@
   },
   "order": [
     "banner",
+    "rich_text_tXdRhy",
     "main"
   ]
 }
