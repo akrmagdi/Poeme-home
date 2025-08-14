@@ -13,12 +13,12 @@
       "type": "collection-banner",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": true,
+        "allow_transparent_header": false,
         "enable_parallax": true,
         "show_collection_title": true,
         "show_collection_description": true,
-        "show_collection_image": true,
-        "collection_title_size": "h0",
+        "show_collection_image": false,
+        "collection_title_size": "h1",
         "image_size": "md",
         "image": "shopify://shop_images/Untitled_design.jpg",
         "mobile_text_position": "place-self-center text-center",
@@ -28,39 +28,6 @@
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 10
-      }
-    },
-    "rich_text_tXdRhy": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_7W9PKi": {
-          "type": "subheading",
-          "settings": {
-            "text": "This collection celebrates classic design. Where harmony, symmetry and proportion meet a refined, contemporary aesthetic. Thoughtfully crafted fro the modern home and designed to captivate for years to come."
-          }
-        },
-        "heading_w9BxyQ": {
-          "type": "heading",
-          "settings": {
-            "text": "",
-            "heading_tag": "h1",
-            "text_color": "",
-            "gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "subheading_7W9PKi",
-        "heading_w9BxyQ"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "medium",
-        "text_position": "center",
-        "background": "#fdfbfa",
-        "background_gradient": "",
-        "text_color": ""
       }
     },
     "main": {
@@ -80,7 +47,6 @@
   },
   "order": [
     "banner",
-    "rich_text_tXdRhy",
     "main"
   ]
 }
