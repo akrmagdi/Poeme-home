@@ -36,7 +36,7 @@
         "subheading_7W9PKi": {
           "type": "subheading",
           "settings": {
-            "text": "Where Classic Style Meets Contemporary Beauty"
+            "text": "This collection celebrates classic design. Where harmony, symmetry and proportion meet a refined, contemporary aesthetic. Thoughtfully crafted fro the modern home and designed to captivate for years to come."
           }
         },
         "heading_w9BxyQ": {
@@ -47,23 +47,16 @@
             "text_color": "",
             "gradient": ""
           }
-        },
-        "richtext_HjpXmD": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>This collection celebrates classic design. Where harmony, symmetry and proportion meet a refined, contemporary aesthetic. Thoughtfully crafted fro the modern home and designed to captivate for years to come. </p><p></p>"
-          }
         }
       },
       "block_order": [
         "subheading_7W9PKi",
-        "heading_w9BxyQ",
-        "richtext_HjpXmD"
+        "heading_w9BxyQ"
       ],
       "name": "Rich text",
       "settings": {
         "full_width": true,
-        "content_width": "large",
+        "content_width": "medium",
         "text_position": "center",
         "background": "#fdfbfa",
         "background_gradient": "",
