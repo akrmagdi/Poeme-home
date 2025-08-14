@@ -26,7 +26,7 @@
             "overlay_width": 30,
             "overlay_color": "#000000",
             "overlay_opacity": 0,
-            "image": "shopify://shop_images/Option1landscape.jpg",
+            "image": "shopify://shop_images/Option2Portrait.jpg",
             "mobile_image": "shopify://shop_images/Option2Portrait.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-start text-start",
