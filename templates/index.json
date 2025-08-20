@@ -137,12 +137,6 @@
     "image_with_text_overlay_ymrxy8": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "richtext_ECX3B8": {
-          "type": "richtext",
-          "settings": {
-            "content": "<h4><strong>elevated living</strong></h4>"
-          }
-        },
         "heading_wFgfmr": {
           "type": "heading",
           "settings": {
@@ -152,7 +146,6 @@
         }
       },
       "block_order": [
-        "richtext_ECX3B8",
         "heading_wFgfmr"
       ],
       "name": "Image with text overlay",
