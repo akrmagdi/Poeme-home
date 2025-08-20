@@ -169,7 +169,7 @@
           "type": "heading",
           "settings": {
             "text": "Explore Our Collections",
-            "heading_tag": "h1",
+            "heading_tag": "h2",
             "text_color": "#000000",
             "gradient": ""
           }
