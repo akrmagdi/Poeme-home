@@ -16,8 +16,9 @@
       "blocks": {
         "message": {
           "type": "message",
+          "disabled": true,
           "settings": {
-            "text": "Soft living, worldwide.",
+            "text": "Simple Timeless Luxuries",
             "url": ""
           }
         },
@@ -33,7 +34,6 @@
         "message",
         "message_7zpt4V"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky": true,
         "autoplay": false,
