@@ -16,7 +16,6 @@
       "blocks": {
         "message": {
           "type": "message",
-          "disabled": true,
           "settings": {
             "text": "Simple Timeless Luxuries",
             "url": ""
@@ -24,6 +23,7 @@
         },
         "message_7zpt4V": {
           "type": "message",
+          "disabled": true,
           "settings": {
             "text": "Crafted with care. Delivered with love.",
             "url": ""
