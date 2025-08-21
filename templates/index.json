@@ -154,12 +154,12 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "md",
-        "image": "shopify://shop_images/Marble_flatlay1_-_add_tagline.heic",
+        "image": "shopify://shop_images/IMG_6407.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 17
+        "overlay_opacity": 14
       }
     },
     "rich_text_ejmVDW": {
@@ -467,7 +467,7 @@
             "navigation_label": "",
             "subheading": "",
             "title": "Design That Brings Joy",
-            "content": "<p>At Poème Home our aim is to bring to you unique and timeless collections that offer luxurious materials, rich textures and harmonious colour palettes. <em><strong>Design that will bring joy to your everyday!</strong></em><br/><br/><br/><em><strong>“I love how good design can elevate your daily experiences<br/>and I especially love the way beautiful design can make you feel. Just like a well crafted poem, design can inspire, uplift and transport you to another place.</strong></em><strong>”  </strong></p><p><strong>Founder, Alison MacCormick.</strong></p><p><strong> </strong></p>"
+            "content": "<p>At Poème Home our aim is to bring to you unique and timeless collections that offer luxurious materials, rich textures and harmonious colour palettes. <em><strong>Design that will bring joy to your everyday!</strong></em></p><p>To us, great design is about resonance. It’s the detail that softens a space, the texture that catches the light, and the quiet joy something brings simply by being there.<br/><br/><em><strong>“I love how good design can elevate your daily experiences<br/>and I especially love the way beautiful design can make you feel. Just like a well crafted poem, design can inspire, uplift and transport you to another place.</strong></em><strong>”  </strong></p><p><strong>Founder, Alison MacCormick.</strong></p><p><strong> </strong></p>"
           }
         }
       },
