@@ -140,7 +140,7 @@
         "heading_wFgfmr": {
           "type": "heading",
           "settings": {
-            "text": "Beauty, Luxury, Style.",
+            "text": "Beauty. Luxury. Style.",
             "heading_tag": "h0"
           }
         }
@@ -155,6 +155,7 @@
         "enable_parallax": false,
         "image_size": "md",
         "image": "shopify://shop_images/IMG_6502.jpg",
+        "mobile_image": "shopify://shop_images/IMG_6502_3ab5fb34-42a1-4a73-b732-0b63ec3201f1.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
