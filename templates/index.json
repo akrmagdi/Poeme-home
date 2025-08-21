@@ -163,6 +163,22 @@
         "overlay_opacity": 18
       }
     },
+    "scrolling_text_TB9CCN": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "Beauty   Luxury   Style",
+        "text_size": "small",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
     "rich_text_ejmVDW": {
       "type": "rich-text",
       "blocks": {
@@ -488,6 +504,7 @@
     "rich_text_VCmxmp",
     "featured_collection_CwjdMg",
     "image_with_text_overlay_ymrxy8",
+    "scrolling_text_TB9CCN",
     "rich_text_ejmVDW",
     "media_grid_RcYxij",
     "before_after_image_agcmDq",
