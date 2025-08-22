@@ -16,9 +16,8 @@
       "blocks": {
         "message": {
           "type": "message",
-          "disabled": true,
           "settings": {
-            "text": "Simple Timeless Luxuries",
+            "text": "Simple Timeless Luxuries To Elevate Your Home",
             "url": ""
           }
         },
