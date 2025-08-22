@@ -25,7 +25,7 @@
           "type": "message",
           "disabled": true,
           "settings": {
-            "text": "Crafted with care. Delivered with love.",
+            "text": "Welcome To Our World!",
             "url": ""
           }
         }
@@ -38,7 +38,7 @@
         "enable_sticky": true,
         "autoplay": false,
         "cycle_speed": 11,
-        "text_size": "text-xs",
+        "text_size": "text-base",
         "navigation_mode": "arrows",
         "scrolling_speed": 30,
         "background": "#cf9042",
