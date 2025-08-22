@@ -41,7 +41,7 @@
         "text_size": "text-xs",
         "navigation_mode": "arrows",
         "scrolling_speed": 30,
-        "background": "#373636",
+        "background": "#cf9042",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
