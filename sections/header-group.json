@@ -36,7 +36,7 @@
       "settings": {
         "enable_sticky": true,
         "autoplay": true,
-        "cycle_speed": 10,
+        "cycle_speed": 6,
         "text_size": "text-base",
         "navigation_mode": "arrows",
         "scrolling_speed": 30,
