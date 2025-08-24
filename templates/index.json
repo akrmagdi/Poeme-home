@@ -21,7 +21,7 @@
             "overlay_color": "#000000",
             "overlay_opacity": 17,
             "image": "shopify://shop_images/Updated_Bright_hero_image_1.jpg",
-            "mobile_image": "shopify://shop_images/vase_potential_mobile_hero_image.jpg",
+            "mobile_image": "shopify://shop_images/Mobile_hero_1.jpg",
             "content_max_width": 1200,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
