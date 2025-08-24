@@ -216,7 +216,7 @@
           "settings": {
             "image": "shopify://shop_images/IMG_7106.jpg",
             "title": "CLASSIC COLLECTION",
-            "heading_tag": "h5",
+            "heading_tag": "h4",
             "link_url": "shopify://collections/classic-collection",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
@@ -238,7 +238,7 @@
           "settings": {
             "image": "shopify://shop_images/IMG_7067.jpg",
             "title": "THE CHATEAU EDIT",
-            "heading_tag": "h3",
+            "heading_tag": "h4",
             "link_url": "shopify://collections/the-chateau-edit",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
@@ -259,8 +259,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Limited_Editions.jpg",
-            "title": "Limited Edition",
-            "heading_tag": "h3",
+            "title": "LIMITED EDITIONS",
+            "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
