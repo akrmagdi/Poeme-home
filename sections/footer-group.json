@@ -114,12 +114,21 @@
             "show_menu_title": true,
             "menu_title": "DISCOVER"
           }
+        },
+        "links_jTU3yh": {
+          "type": "links",
+          "settings": {
+            "menu": "support",
+            "show_menu_title": true,
+            "menu_title": "SUPPORT"
+          }
         }
       },
       "block_order": [
         "newsletter",
         "text",
-        "links"
+        "links",
+        "links_jTU3yh"
       ],
       "settings": {
         "show_social_media": true,
