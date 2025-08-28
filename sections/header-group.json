@@ -50,6 +50,7 @@
       "blocks": {
         "mega_menu_jDbiRi": {
           "type": "mega_menu",
+          "disabled": true,
           "settings": {
             "menu_item": "about",
             "layout": "drawer",
