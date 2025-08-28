@@ -108,7 +108,11 @@
       "settings": {
         "collection": "the-chateau-edit",
         "products": [
-          "chantilly-scalloped-tray-slender"
+          "chantilly-scalloped-tray-slender",
+          "versailles-scalloped-box-tray-petite",
+          "laurent-xl-bowl",
+          "versailles-scalloped-box-tray-petite-copy-1",
+          "chantilly-scalloped-tray-slender-emperador-light"
         ],
         "full_width": true,
         "stack_products": false,
