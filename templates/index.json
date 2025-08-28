@@ -86,7 +86,7 @@
         "richtext_Jn43qr": {
           "type": "richtext",
           "settings": {
-            "content": "<h4><em><strong>A Boutique  Destination For Beautiful Design. </strong></em></h4><p>Offering a curated collection of unique products to provide an elevated sense of<br/>style to the story of your home<em>.</em></p>"
+            "content": "<h4><em><strong>A Boutique  Destination For Beautiful Design. </strong></em></h4><p>Offering a curated collection of unique products to provide an elevated sense of<br/>style to the <em>story of your home.</em></p>"
           }
         }
       },
