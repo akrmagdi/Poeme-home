@@ -505,10 +505,10 @@
         "omega_instafeed_carousel_QKJJij": {
           "type": "shopify://apps/omega-instafeed/blocks/carousel/710f3bb4-c962-4be4-a6e2-1cee2ca38517",
           "settings": {
-            "IdOfOmegaCarousel": "11691",
+            "IdOfOmegaCarousel": "1688",
             "padding_top": 0,
             "padding_bottom": 0,
-            "background_color": "#ffffff"
+            "background_color": "#d03333"
           }
         }
       },
@@ -519,7 +519,7 @@
         "full_width": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false,
-        "background": "",
+        "background": "#cf9042",
         "background_gradient": "",
         "text_color": ""
       }
