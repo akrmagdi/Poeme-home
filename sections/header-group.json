@@ -50,10 +50,9 @@
       "blocks": {
         "mega_menu_jDbiRi": {
           "type": "mega_menu",
-          "disabled": true,
           "settings": {
             "menu_item": "about",
-            "layout": "drawer",
+            "layout": "horizontal",
             "submenu_style": "bold_heading",
             "image_1": "shopify://shop_images/Collage1_83f6ab9b-3ca8-4bc9-a0d4-23bb6302e422.jpg",
             "image_heading_1": "",
