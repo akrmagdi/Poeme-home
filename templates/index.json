@@ -215,7 +215,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG_7106.jpg",
-            "title": "THE CLASSIC COLLECTION",
+            "title": "CLASSIC COLLECTION",
             "heading_tag": "h4",
             "link_url": "shopify://collections/classic-collection",
             "link_text": "",
@@ -259,7 +259,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Limited_Editions.jpg",
-            "title": "LIMITED EDITIONS",
+            "title": "LIMITED EDITIONS (Coming soon)",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
