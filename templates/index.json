@@ -86,7 +86,7 @@
         "richtext_Jn43qr": {
           "type": "richtext",
           "settings": {
-            "content": "<h4><strong>A Boutique Destination For  </strong><em><strong>BEAUTIFUL DESIGN </strong></em></h4><p>Offering a curated collection of unique products to provide an elevated sense of<br/>style to <em><strong>the story of your home</strong></em>.</p>"
+            "content": "<h4>A Boutique Destination For  <em><strong>BEAUTIFUL DESIGN </strong></em></h4><p>Offering a curated collection of unique products to provide an elevated sense of<br/>style to <em><strong>the story of your home</strong></em>.</p>"
           }
         }
       },
@@ -485,7 +485,7 @@
             "navigation_label": "",
             "subheading": "",
             "title": "",
-            "content": "<h4><strong>DESIGN THAT BRINGS </strong><em><strong>JOY</strong></em></h4><p>At Poème Home our aim is to bring to you unique and timeless collections that offer luxurious materials, rich textures and harmonious colour palettes. <em><strong>Design that brings joy to your everyday!</strong></em><br/><br/><em><strong>“I love how good design can elevate your daily experiences and I especially love the way beautiful design can make you feel. Just like a well crafted poem, design can inspire, uplift and transport you to another place.”  </strong></em></p><p>Founder, Alison MacCormick.</p><p><strong> </strong></p>"
+            "content": "<h4>DESIGN THAT<em> </em>BRINGS<strong> </strong><em>JOY</em></h4><p>At Poème Home our aim is to bring to you unique and timeless collections that offer luxurious materials, rich textures and harmonious colour palettes. <em><strong>Design that brings joy to your everyday!</strong></em><br/><br/><em><strong>“I love how good design can elevate your daily experiences and I especially love the way beautiful design can make you feel. Just like a well crafted poem, design can inspire, uplift and transport you to another place.”  </strong></em></p><p>Founder, Alison MacCormick.</p><p><strong> </strong></p>"
           }
         }
       },
