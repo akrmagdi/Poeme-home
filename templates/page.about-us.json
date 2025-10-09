@@ -22,7 +22,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG_7160.jpg",
-            "media_width": 35,
+            "media_width": 50,
             "media_position": "end",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
@@ -57,8 +57,8 @@
         "image_QhqQPH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Collage2_158d7685-0527-4595-890a-2b50da58a1a8.jpg",
-            "media_width": 35,
+            "image": "shopify://shop_images/IMG_2253.jpg",
+            "media_width": 60,
             "media_position": "start",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
