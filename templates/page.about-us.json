@@ -22,7 +22,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG_7160.jpg",
-            "media_width": 45,
+            "media_width": 40,
             "media_position": "end",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
@@ -58,7 +58,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG_2307_2.jpg",
-            "media_width": 45,
+            "media_width": 40,
             "media_position": "start",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
