@@ -58,7 +58,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG_2307_59bae455-7174-4c2c-b4c3-f334b7215d21.jpg",
-            "media_width": 60,
+            "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center-start text-start",
             "icon": "none",
