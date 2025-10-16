@@ -153,7 +153,7 @@
         "full_width": true,
         "allow_transparent_header": false,
         "enable_parallax": false,
-        "image_size": "lg",
+        "image_size": "auto",
         "image": "shopify://shop_images/IMG_6502.jpg",
         "mobile_image": "shopify://shop_images/IMG_6502_3ab5fb34-42a1-4a73-b732-0b63ec3201f1.jpg",
         "mobile_text_position": "place-self-center text-center",
