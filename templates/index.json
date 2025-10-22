@@ -165,12 +165,11 @@
     },
     "scrolling_text_TB9CCN": {
       "type": "scrolling-text",
-      "disabled": true,
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "Beauty   Luxury   Style",
-        "text_size": "small",
+        "text": "Beauty.   Luxury.   Style.",
+        "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
