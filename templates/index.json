@@ -45,6 +45,7 @@
             "overlay_width": 85,
             "overlay_color": "#000000",
             "overlay_opacity": 8,
+            "image": "shopify://shop_images/Livingroom_image_hero.jpg",
             "mobile_image": "shopify://shop_images/vase_potential_mobile_hero_image.jpg",
             "content_max_width": 700,
             "mobile_text_position": "place-self-center text-center",
