@@ -14,7 +14,8 @@
       "settings": {
         "collections": [
           "the-chateau-edit",
-          "classic-collection"
+          "classic-collection",
+          "limited-editions"
         ],
         "collections_per_row_mobile": "1",
         "collections_per_row": 3,
