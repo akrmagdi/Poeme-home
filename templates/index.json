@@ -259,7 +259,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Limited_Editions.jpg",
-            "title": "LIMITED EDITIONS (Coming soon)",
+            "title": "LIMITED EDITIONS",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
