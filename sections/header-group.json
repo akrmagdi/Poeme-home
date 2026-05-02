@@ -14,24 +14,24 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_EDbrhE": {
+          "type": "message",
+          "settings": {
+            "text": "15% Off All Online Orders Until Mothers Day!",
+            "url": ""
+          }
+        },
         "message": {
           "type": "message",
           "settings": {
             "text": "Simple Timeless Luxuries To Elevate Your Home",
             "url": ""
           }
-        },
-        "message_7zpt4V": {
-          "type": "message",
-          "settings": {
-            "text": "Welcome To Our Online Store!",
-            "url": ""
-          }
         }
       },
       "block_order": [
-        "message",
-        "message_7zpt4V"
+        "message_EDbrhE",
+        "message"
       ],
       "settings": {
         "enable_sticky": true,
@@ -108,7 +108,6 @@
             "image_heading_1": "",
             "image_link_1": "",
             "image_text_color_1": "#ffffff",
-            "image_2": "shopify://shop_images/Viola5.jpg",
             "image_heading_2": "",
             "image_link_2": "",
             "image_text_color_2": "#ffffff",
