@@ -108,12 +108,12 @@
       "settings": {
         "collection": "the-chateau-edit",
         "products": [
-          "chantilly-scalloped-tray-slender-emperador-light",
           "chantilly-scalloped-tray-volakas-white",
-          "coco-dish",
           "laurent-xl-bowl-nero-portoro-marble-and-biege-travertine",
-          "chantilly-scalloped-tray-slender-volakas-white-copy",
-          "versailles-scalloped-box-tray-petite"
+          "versailles-scalloped-box-tray-petite",
+          "the-lanvin-catchall",
+          "laurent-xl-bowl-1",
+          "chantilly-scalloped-tray-slender-volakas-white"
         ],
         "full_width": true,
         "stack_products": false,
