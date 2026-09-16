@@ -108,12 +108,12 @@
       "settings": {
         "collection": "the-chateau-edit",
         "products": [
-          "the-lanvin-catchall",
           "chantilly-scalloped-tray-slender-emperador-light",
           "chantilly-scalloped-tray-volakas-white",
           "laurent-xl-bowl",
           "chantilly-scalloped-tray-rosso-levanto",
-          "versailles-scalloped-tray-medium-volakas-white"
+          "versailles-scalloped-tray-medium-volakas-white",
+          "coco-dish"
         ],
         "full_width": true,
         "stack_products": false,
