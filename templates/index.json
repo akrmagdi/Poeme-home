@@ -109,12 +109,11 @@
         "collection": "the-chateau-edit",
         "products": [
           "the-lanvin-catchall",
-          "laurent-xl-bowl-beige-travertine-bowls",
           "chantilly-scalloped-tray-slender-emperador-light",
-          "chantilly-scalloped-tray-slender",
-          "versailles-scalloped-box-tray-petite-verdi-alpi",
           "chantilly-scalloped-tray-volakas-white",
-          "versailles-scalloped-tray-medium"
+          "laurent-xl-bowl",
+          "chantilly-scalloped-tray-rosso-levanto",
+          "versailles-scalloped-tray-medium-volakas-white"
         ],
         "full_width": true,
         "stack_products": false,
